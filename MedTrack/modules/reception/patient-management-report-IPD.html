@@ -1,0 +1,727 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-overview.html " class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="patient-management.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 20 14" height="14px" width="20px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/patientManagement.svg#patientManagement"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Patient Management</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="get-payments.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/rupee.svg#rupee"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Get Payments</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="billing-and-invoices.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/billingInvoice.svg#billingInvoice"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Billing & Invoices</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/mrsReception.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mrs. Reception</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1">Patient Management</h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4">
+                            <div class="px-4">
+                                <div class="row position-relative report-headder">
+                                    <div class="col-lg-4">
+                                        <div class="row">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Appointment Id :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">APP-985236</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Doctor Name :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Ward & Bed :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">Room 12, Bed 15</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Patient Name :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">Mr. Patient</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Patient Id :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">PAT-2563</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Age/Sex :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">32/Male</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row justify-content-lg-end">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Admit Date :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">July 05, 2023 (10:00 AM)
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-end">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Discharge Date :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">-</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-end">
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-muted">Status :</p>
+                                            </div>
+                                            <div class="col-5 col-xxl-4">
+                                                <p class="text-dark fw-medium">Admitted</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row justify-content-lg-end">
+                                    <div class="col-lg-3 col-xxl-2">
+                                        <p class="text-muted">Admission Summary :</p>
+                                    </div>
+                                    <div class="col-lg-9 col-xxl-10">
+                                        <p class="text-dark">Patient have Type 2 Diabetes Mellitus, Hypertension, Hyperlipidemia, Hypothyroidism, Obesity, Osteoporosis, and Sleep Apnea. Hospital admission required and medical team will closely monitor vital signs, glucose levels, blood pressure, and other relevant parameters.  </p>
+                                    </div>
+                                </div>
+                                <div class="accordion" id="accordionExample2">
+                                    <div class="accordion-item mb-3">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed rounded-2 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="false" aria-controls="collapseOne4">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/follow.svg" alt="">
+                                                <p class="fw-semibold text-dark mb-0">Follow Up</p>
+                                            </div>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseOne4" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1 fixed-height-sec">
+                                            <div class="card bg-white p-4 py-2 mb-3 mt-2">
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-muted">Date</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted">Perticulars</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-dark">July 12, 2023 (11:52 pm)</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted mb-2">Medicine given by Nurse (Ms. Yamini)</p>
+                                                        <p class="text-dark fw-medium mb-0">Lucamization (200mg) - 01</p>
+                                                        <p class="text-dark fw-medium mb-2">Xepration (500mg) 01</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card bg-white p-4 py-2">
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-muted">Date</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted">Perticulars</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-dark">July 12, 2023 (11:52 pm)</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted mb-0">Doctor Visit (Dr. Naveen Jindal)</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Complaint</span> - Breathing problem</p>
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Observation</span> - Oxygen level is 85%</p>
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Diagnoses </span> - Oxygen mask provided</p>
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Notes </span> - Monitor oxygen level if oxygen level goes below 80% immediately doctor</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="accordion-item mb-3">
+                                        <h2 class="accordion-header">
+                                          <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne5">
+                                              <div class="d-flex align-items-center gap-2">
+                                                  <img src="../../images/vitalSigns.svg" alt="">
+                                                  <p class="fw-semibold text-dark mb-0">Vital Signs</p>
+                                              </div>
+                                          </button>
+                                        </h2>
+                                        <div id="collapseOne5" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                          <div class="accordion-body pb-0 pt-1">
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <thead>
+                                                    <tr class="border-bottom-light">
+                                                        <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Date</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Weight</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Blood Pressure</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Pulse</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Oxygen Level</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Temprature</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Respiration Rate</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="px-4">
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium">1.</th>
+                                                        <td class="text-black fw-medium small">July 12, 2023</td>
+                                                        <td><p class="fw-normal mb-0 text-black small">55 kgs</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">88/110</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">50</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">92%</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">97.9 F</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">30</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium">2.</th>
+                                                        <td class="text-black fw-medium small">July 11, 2023</td>
+                                                        <td><p class="fw-normal mb-0 text-black small">55 kgs</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">88/110</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">50</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">92%</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">97.2 F</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">28</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium">3.</th>
+                                                        <td class="text-black fw-medium small">July 10, 2023</td>
+                                                        <td><p class="fw-normal mb-0 text-black small">55 kgs</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">88/110</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">50</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">92%</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">97.5 F</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">25</p></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+
+
+
+                                    <div class="accordion-item mb-3">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6" aria-expanded="false" aria-controls="collapseOne6">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/operations.svg" alt="">
+                                                <p class="fw-semibold text-dark mb-0">Operations</p>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne6" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1">
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <thead>
+                                                    <tr class="border-bottom-light">
+                                                        <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Operation</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Doctors</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Nurses</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Medicines</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Equipments</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Start Time </th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Duration </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="px-4">
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium align-top">1.</th>
+                                                        <td class="text-black fw-medium small align-top">Roux-en-y Gastric Bypass</td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline ">Dr. Naveen Jindal</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline ">Dr. Manish Malhotra</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline ">Dr. Rohan Vadiya</p>
+                                                        </td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Sandhya</p>
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Rubina</p>
+                                                            <p class="fw-normal mb-0 text-black small">Mr. Samket</p>
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Sushma</p>
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Dikhsha</p>
+                                                        </td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Rubin (200mg) - 02</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Laxmo - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Bandage - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Morphine (150ml) - 01</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Rubin (200mg) - 02</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">   Laxmo - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Bandage - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Morphine (150ml) - 01</p>
+                                                        </td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Machine.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Cart.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Circuits.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Monitor.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">CO2 and Agents.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Laryngeal Mask Airways.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Surgical Table.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Patient Stretcher.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Patient Stirrups.</p>
+                                                        </td>
+                                                        <td class="align-top"><p class="fw-normal mb-0 text-black small text-center">July 12, 2023<br>
+                                                            10:54 am</p></td>
+                                                        <td class="align-top"><p class="fw-normal mb-0 text-black small">01:25 hrs</p></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+
+                                    
+                                    <div class="accordion-item mb-3">
+                                        <h2 class="accordion-header">
+                                          <button class="accordion-button rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                              <div class="d-flex align-items-center gap-2">
+                                                  <img src="../../images/prescription.svg" alt="prescription">
+                                                  <p class="fw-semibold text-dark mb-0">Prescription</p>
+                                              </div>
+                                          </button>
+                                        </h2>
+                                        <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                          <div class="accordion-body pb-0 pt-1">
+                                              <div class="table-responsive">
+                                                  <table class="table mb-0">
+                                                      <thead>
+                                                      <tr class="border-bottom-light">
+                                                          <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Details</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Frequency</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Intake</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Duration</th>
+                                                      </tr>
+                                                      </thead>
+                                                      <tbody class="px-4">
+                                                      <tr>
+                                                          <th class="fw-normal text-black ps-4">1.</th>
+                                                          <td> 
+                                                              <p class="mb-0 text-black fw-medium small">Metformin</p>
+                                                              <p class="mb-0 text-black fw-normal small">200 mg</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="mb-0 text-black fw-normal small">1-0-0</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">Before Food</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">3 Days</p>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <th class="fw-normal text-black ps-4 fw-medium">2.</th>
+                                                          <td> 
+                                                              <p class="mb-0 text-black fw-medium small">Sulfonylureas</p>
+                                                              <p class="mb-0 text-black fw-normal small">500 mg</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="mb-0 text-black fw-normal small">0-0-1</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">Before Food</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">3 Days</p>
+                                                          </td>
+                                                      </tr>
+                                                  </tbody>
+                                                  </table>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    <div class="accordion-item mb-3">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/diagnosis.svg" alt="Diagnosis">
+                                                <p class="fw-semibold text-dark mb-0">File Records</p>
+                                            </div>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseTwo3" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                <tr class="border-bottom-light">
+                                                    <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">File Name</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Responsible Person</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Uploaded Date</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">File Size</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">File Type</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Download</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="px-4">
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">1.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">2.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">3.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">4.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">5.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item mb-3">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="../../images/billing.svg" alt="Billing">
+                                                    <p class="fw-semibold text-dark mb-0">Billing</p>
+                                                </div>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseThree4" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                <tr class="border-bottom-light">
+                                                    <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Invoice</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Invoice Date</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Amount</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Status</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="px-4">
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">1.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">INV-23658956</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-normal small">July 15, 2023 (10:52 am)</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-black small d-flex align-items-center gap-1">28,750.00</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-warning small">Pending</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-normal mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/print.svg" width="12px" alt="download">
+                                                            Print
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">2.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">INV-23658956</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-normal small">July 15, 2023 (10:52 am)</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-black small d-flex align-items-center gap-1">28,750.00</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-success small">Paid</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-normal mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/print.svg" width="12px" alt="download">
+                                                            Print
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">3.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">INV-23658956</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-normal small">July 15, 2023 (10:52 am)</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-black small d-flex align-items-center gap-1">28,750.00</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-success small">Paid</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-normal mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/print.svg" width="12px" alt="download">
+                                                            Print
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>

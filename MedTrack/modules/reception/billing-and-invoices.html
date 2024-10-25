@@ -1,0 +1,1279 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-overview.html " class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="patient-management.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 20 14" height="14px" width="20px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/patientManagement.svg#patientManagement"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Patient Management</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="get-payments.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/rupee.svg#rupee"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Get Payments</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="billing-and-invoices.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/billingInvoice.svg#billingInvoice"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Billing & Invoices</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/mrsReception.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mrs. Reception</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1">Billing & Invoices</h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="col-12 mb-4">
+                            <ul class="nav nav-pills mb-0" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-semibold rounded-bottom-0 px-4 py-3 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">OPD Billing</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link fw-semibold px-4 rounded-bottom-0 py-3" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">IPD Billing</button>
+                                </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade bg-white py-4 show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 px-4 mb-3">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="border p-1 rounded-1">
+                                                <svg viewBox="0 0 14 14" height="18px" width="18px" class="svg-only-success">
+                                                    <use xlink:href="../../images/hospital-success.svg#hospital-success"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="text-grey fw-medium mb-0 text-black">List of OPD Billings</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="position-relative">
+                                                <img src="../../images/search.svg" class="position-absolute search-icon" alt="search">
+                                                <input type="text" class="form-control bg-white rounded-2 search-field py-2" placeholder="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="border-bottom-light">
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light ps-4">No.</th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Appointment ID</th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Invoice No. </th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Invoice Date/Time</th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Doctor</th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Charges For</th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Amount</th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Status</th>
+                                                <th class="text-muted text-nowrap fw-normal py-3 bg-light">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="px-4">
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">01</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small pt-1">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">02</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">03</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">04</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">05</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">06</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">07</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">08</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">09</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">10</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#opdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between px-4">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                              <li class="page-item">
+                                                <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Previous">
+                                                 <span><img src="../../images/chevron-left.svg" alt=""></span>
+                                                </a>
+                                              </li>
+                                              <li class="page-item active ms-3"><a class="page-link px-3 shadow-none rounded-1 text-black" href="#">1</a></li>
+                                              <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">3</a></li>
+                                              <li class="page-item ms-3">
+                                                <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Next">
+                                                  <span><img src="../../images/chevron-right.svg" alt=""></span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <p class="mb-0 text-muted text-nowrap">Showing to 10 of 50 entries</p>
+                                            <select class="form-select shadow-none" aria-label="Default select example">
+                                                <option selected="">10 entries</option>
+                                                <option value="1">20 entries</option>
+                                                <option value="2">30 entries</option>
+                                                <option value="3">40 entries</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade bg-white py-4" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 mb-3 px-4">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="border p-1 rounded-1">
+                                                <svg viewBox="0 0 14 14" height="18px" width="18px" class="svg-only-success">
+                                                    <use xlink:href="../../images/hospital-success.svg#hospital-success"></use>
+                                                </svg>
+                                            </div>
+                                            <p class="text-grey fw-medium mb-0 text-black">List of IPD Billings</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="position-relative">
+                                                <img src="../../images/search.svg" class="position-absolute search-icon" alt="search">
+                                                <input type="text" class="form-control bg-white rounded-2 search-field py-2" placeholder="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="border-bottom-light">
+                                                <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Appointment ID</th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Invoice No. </th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Invoice Date/Time</th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Doctor</th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Charges For</th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Amount</th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Status</th>
+                                                <th class="text-muted fw-normal py-3 bg-light">Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="px-4">
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">01</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small pt-1">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">02</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">03</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">04</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">05</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">06</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">07</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">08</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">09</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="fw-normal text-black ps-4 fw-medium">10</th>
+                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">FNONLQ1098</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Today (10:00am)</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">
+                                                        </p><div class="d-flex align-items-center gap-2">
+                                                            <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                            <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                                        </div>
+                                                    <p></p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Consultations Fees</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 text-dark small">Rs. 500</p>
+                                                </td>
+                                                <td>
+                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                </td>
+                                                <td>
+                                                    <p class="badge text-bg-success rounded-1 py-2 mb-0" data-bs-toggle="modal" data-bs-target="#ipdModal"><img src="../../images/view.svg" alt=""></p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between px-4">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                              <li class="page-item">
+                                                <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Previous">
+                                                 <span><img src="../../images/chevron-left.svg" alt=""></span>
+                                                </a>
+                                              </li>
+                                              <li class="page-item active ms-3"><a class="page-link px-3 shadow-none rounded-1 text-black" href="#">1</a></li>
+                                              <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">3</a></li>
+                                              <li class="page-item ms-3">
+                                                <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Next">
+                                                  <span><img src="../../images/chevron-right.svg" alt=""></span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                        </nav>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <p class="mb-0 text-muted text-nowrap">Showing to 10 of 50 entries</p>
+                                            <select class="form-select shadow-none" aria-label="Default select example">
+                                                <option selected="">10 entries</option>
+                                                <option value="1">20 entries</option>
+                                                <option value="2">30 entries</option>
+                                                <option value="3">40 entries</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="opdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-xxl">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+                    <h5 class="text-success fw-bold mt-4">OPD Billing</h5>
+                <hr class="mb-0">
+                <div class="row mt-3">
+                    <div class="col-md-12 mb-3">
+                        <div class="rounded-3 bg-light p-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Patient Id :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">PAT-2563</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Appointment Id :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">APP-985236</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Doctor Name  :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Dr. Naveen Jindal</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Patient Name :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Mr. Patient</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Age/Sex :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">32/Male</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Payment Mode :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Cash</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Invoice No. :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">FND2645874</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Date/Time :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">10 Sep, 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Status :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Paid</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                    <div class="table-responsive mb-2">
+                        <table class="table mb-2">
+                            <thead>
+                            <tr class="border-bottom-light">
+                                <th class="text-muted fw-normal py-3 bg-light ps-4">S.No.</th>
+                                <th class="text-muted fw-normal py-3 bg-light">Particulars</th>
+                                <th class="text-muted fw-normal py-3 bg-light">Quantity</th>
+                                <th class="text-muted fw-normal py-3 bg-light">Discount</th>
+                                <th class="text-muted fw-normal py-3 bg-light">GST</th>
+                                <th class="text-muted fw-normal py-3 bg-light text-end">Amount</th>
+                            </tr>
+                            </thead>
+                            <tbody class="px-4">
+                                <tr>
+                                    <th class="fw-normal text-black ps-4 fw-medium">1.</th>
+                                    <td>
+                                        <p class="text-black mb-0 fw-semibold">Dr. Naveen Jindal</p>
+                                        <p class="text-black mb-0 fw-medium small">Consultation Fees</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small">01</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small">-</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small">-</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small text-end">Rs. 500.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <hr class="mb-2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="3">
+                                        <div class="d-flex align-items-center gap-2 flwx-wrap justify-content-end mb-2">
+                                            <p class="text-muted fw-medium mb-0">Total Discount :</p>
+                                            <p class="text-black fw-medium mb-0">0.00</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 flwx-wrap justify-content-end mb-2">
+                                            <p class="text-muted fw-medium mb-0">GST Amount :</p>
+                                            <p class="text-black fw-medium mb-0">0.00</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 flwx-wrap justify-content-end">
+                                            <p class="text-muted fw-medium mb-0">Other Charges :</p>
+                                            <p class="text-black fw-medium mb-0">0.00</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table mb-4">
+                            <thead>
+                            <tr class="border-top-light">
+                                <th class="text-dark text-end fw-bold py-2 bg-light">Total : Rs. 500.00</th>
+                            </tr>
+                            </thead>
+                            <tbody class="px-4">
+                                <tr>
+                                    <td>
+                                        <p class="fw-medium text-success mb-2 text-end">Paid: 500.00</p>
+                                        <p class="fw-medium text-danger mb-0 text-end">Balance: 0.00</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                                    <use xlink:href="../../images/print-btn.svg#print-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Print </span>
+                            </button>
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                                    <use xlink:href="../../images/download-btn.svg#download-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Download </span>
+                            </button>
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-2">
+                                    <use xlink:href="../../images/email-btn.svg#email-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Email </span>
+                            </button>
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                                    <use xlink:href="../../images/whatsapp-btn.svg#whatsapp-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Whatsapp </span>
+                            </button>
+                        </div>
+                    <button class="btn btn-outline-success px-2 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-3 py-1 d-block"> Close </span></button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+     <!-- Modal -->
+     <div class="modal fade" id="ipdModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-xxl">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+                    <h5 class="text-success fw-bold mt-4">IPD Billing</h5>
+                <hr class="mb-0">
+                <div class="row mt-3">
+                    <div class="col-md-12 mb-3">
+                        <div class="rounded-3 bg-light p-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Patient Id :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">PAT-2563</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Appointment Id :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">APP-985236</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Doctor Name  :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Dr. Naveen Jindal</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Patient Name :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Mr. Patient</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Age/Sex :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">32/Male</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Payment Mode :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Cash</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Invoice No. :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">FND2645874</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Date/Time :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">10 Sep, 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <p class="text-black mb-0">Status :</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <p class="text-dark mb-0 fw-medium">Paid</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                    <div class="table-responsive mb-2">
+                        <table class="table mb-2">
+                            <thead>
+                            <tr class="border-bottom-light">
+                                <th class="text-muted fw-normal py-3 bg-light ps-4">S.No.</th>
+                                <th class="text-muted fw-normal py-3 bg-light">Particulars</th>
+                                <th class="text-muted fw-normal py-3 bg-light">Quantity</th>
+                                <th class="text-muted fw-normal py-3 bg-light">Discount</th>
+                                <th class="text-muted fw-normal py-3 bg-light">GST</th>
+                                <th class="text-muted fw-normal py-3 bg-light text-end">Amount</th>
+                            </tr>
+                            </thead>
+                            <tbody class="px-4">
+                                <tr>
+                                    <th class="fw-normal text-black ps-4 fw-medium">1.</th>
+                                    <td>
+                                        <p class="text-black mb-0 fw-semibold">Dr. Naveen Jindal</p>
+                                        <p class="text-black mb-0 fw-medium small">Consultation Fees</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small">01</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small">-</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small">-</p>
+                                    </td>
+                                    <td>
+                                        <p class="fw-medium mb-0 text-black small text-end">Rs. 500.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">
+                                        <hr class="mb-2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td colspan="3">
+                                        <div class="d-flex align-items-center gap-2 flwx-wrap justify-content-end mb-2">
+                                            <p class="text-muted fw-medium mb-0">Total Discount :</p>
+                                            <p class="text-black fw-medium mb-0">0.00</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 flwx-wrap justify-content-end mb-2">
+                                            <p class="text-muted fw-medium mb-0">GST Amount :</p>
+                                            <p class="text-black fw-medium mb-0">0.00</p>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2 flwx-wrap justify-content-end">
+                                            <p class="text-muted fw-medium mb-0">Other Charges :</p>
+                                            <p class="text-black fw-medium mb-0">0.00</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table mb-4">
+                            <thead>
+                            <tr class="border-top-light">
+                                <th class="text-dark text-end fw-bold py-2 bg-light">Total : Rs. 500.00</th>
+                            </tr>
+                            </thead>
+                            <tbody class="px-4">
+                                <tr>
+                                    <td>
+                                        <p class="fw-medium text-success mb-2 text-end">Paid: 500.00</p>
+                                        <p class="fw-medium text-danger mb-0 text-end">Balance: 0.00</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                                    <use xlink:href="../../images/print-btn.svg#print-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Print </span>
+                            </button>
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                                    <use xlink:href="../../images/download-btn.svg#download-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Download </span>
+                            </button>
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-2">
+                                    <use xlink:href="../../images/email-btn.svg#email-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Email </span>
+                            </button>
+                            <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1" data-bs-dismiss="modal" aria-label="Close">
+                                <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                                    <use xlink:href="../../images/whatsapp-btn.svg#whatsapp-btn"></use>
+                                </svg>
+                                <span class="py-1 d-block"> Whatsapp </span>
+                            </button>
+                        </div>
+                    <button class="btn btn-outline-success px-2 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-3 py-1 d-block"> Close </span></button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

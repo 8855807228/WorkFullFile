@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="doctor-overview.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Overview </span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="doctor-appointments.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/appointments.svg#appointments"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Appointments </span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="doctor-schedule.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/schedules.svg#schedules"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Schedules </span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="doctor-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Profile </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/user.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mr. Doctor</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1"> Profile </h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4">
+                            <div class="px-4">
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap flex-wrap">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="border rounded-1">
+                                            <img src="../../images/Mr.Dr.jpg" width="120px" alt="">
+                                        </div>
+                                        <div>
+                                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                                <h4 class="fw-bold text-dark mb-1 mt-2"> Dr. Doctor Name </h4>
+                                                <span class="p-2 border border-grey text-success rounded px-2 py-1">Paediatric</span>
+                                                <span class="p-2 border border-grey text-success rounded px-2 py-1">Laparoscopy</span>
+                                                <span class="p-2 border border-grey text-success rounded px-2 py-1">Thoracoscopy</span>
+                                            </div>
+                                            <p class="text-success my-0">General Physician</p>
+                                            <p class="text-dark fw-bold mt-1 mb-2">12+ Years Experience</p>
+                                            <p class="small text-black my-0">M.S, M.Ch (Paediatric Surgery)</p>
+                                            <p class="small text-black my-0">Medic General Medical Hospital</p>
+                                            <p class="small text-black my-0">Pune, MH (INDIA)</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="border border-light w-fit rounded text-success fw-semibold mt-3 mt-lg-0 py-2 px-4 d-flex align-items-center gap-1 mb-3" >
+                                            ID : DOT-235689
+                                        </div>
+                                        <div class="border-start border-success border-3 px-2" style="max-width: 183px;">
+                                           <p class="small text-black mb-1">+91-9685652323</p>
+                                           <p class="small text-black mb-1">Doctoremail@mail.com</p>
+                                           <p class="small text-black mb-1">458, Sector 2, Moon Street,
+                                            Pune , MH (253689)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                <div class="row">
+                                    <div class="col-lg-12 mb-4">
+                                        <div class="card border-0 bg-white py-4 mt-4 h-100">
+                                            <div class="px-4">
+                                        <h5 class="text-dark fw-bold">Biography</h5>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <p class="text-muted">Dr. Doctor Name is a distinguished physician renowned for their expertise and care in the field of cardiology. Born on [Date of Birth], Dr. Name's journey into medicine began with a fascination for the human heart and a deep desire to make a difference in people's lives.</p>
+
+                                                <p class="text-muted mb-0">After completing their undergraduate studies in [Field of Study] with honors, Dr. Name earned their Doctor of Medicine (M.D.) degree from [Medical School]. They demonstrated exceptional dedication and skill during their residency at [Hospital/Institution], where they specialized in cardiology.</p>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <p class="text-muted">Throughout their illustrious career, Dr. Name has been at the forefront of cutting-edge research in cardiovascular medicine. Their groundbreaking studies have been published in prestigious journals and have influenced the field's advancements.</p>
+
+                                                <p class="text-muted mb-0">Dr. Name's commitment to patient care is unmatched. Known for their empathetic bedside manner, they build strong connections with their patients, ensuring they feel heard and understood. Their patient-centered approach, combined with their medical acumen, has saved countless lives and improved the quality of life for many.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12 px-0">
+                                        <div class="card border-0 bg-white py-4 mt-4 h-100">
+                                            <div class="px-4">
+                                                 <h5 class="text-dark fw-bold">Associated Hospitals / Clinics</h5>
+                                            </div>
+                                            <div class="table-responsive mt-1">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr class="border-bottom-light">
+                                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap ps-4">No.</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Hospital / Clinic Name</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Location</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Specialisation</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Designation</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Join Date</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">End Date</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="px-4">
+                                                        <tr>
+                                                            <th class="fw-normal text-black ps-4 fw-medium">01</th>
+                                                            <td class="text-success fw-medium small">Max Super Speciality Hospital</td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">Pune</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">General Physician</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">Sr. Consultant</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">Feb 18, 2021</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">-</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="fw-normal text-black ps-4 fw-medium">02</th>
+                                                            <td class="text-success fw-medium small">Max Super Speciality Hospital</td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">Mumbai</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">General Physician</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">Asst. Consultant</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">June 24, 2015</p>
+                                                            </td>
+                                                            <td>
+                                                                <p class="fw-medium mb-0 text-black small">June 15, 2020</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>

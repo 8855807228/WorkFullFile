@@ -1,0 +1,50 @@
+/* Notification container */
+.notification {
+  width: 100%; /* Fixed width for the notification */
+  padding: 15px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f8f9fa; /* Light background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 20px; /* Space from the top */
+}
+
+/* Title styling */
+.notification h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px; /* Space below title */
+  color: #333;
+  text-align: center; /* Center-align the title */
+}
+
+/* Scrollable list styling */
+.list-group {
+  max-height: 200px; /* Set a maximum height for the scrollable list */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove default list styles */
+  border: 1px solid #ddd; /* Border around the list */
+  border-radius: 4px; /* Rounded corners for the list */
+  background-color: #fff;
+}
+
+/* List item styling */
+.list-group-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd; /* Borders between list items */
+  background-color: #fff; /* White background for each item */
+  color: #555;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for list items */
+.list-group-item:hover {
+  background-color: #f1f1f1; /* Light grey on hover */
+}
+
+/* Remove border from last list item */
+.list-group-item:last-child {
+  border-bottom: none;
+}

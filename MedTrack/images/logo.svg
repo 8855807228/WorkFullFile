@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="146" height="29" viewBox="0 0 146 29">
+  <g id="Group_2" data-name="Group 2" transform="translate(-31 -18)">
+    <g id="Group_1" data-name="Group 1">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="27" height="27" rx="7" transform="translate(31 19)" fill="#2c7f77"/>
+      <path id="da74554859836aba80eccc91a2675ca9" d="M18.475,9.571H16.307a.867.867,0,0,0-.616.26L14.616,10.95,12.188,8.184a.867.867,0,0,0-1.266,0L9.448,9.658H8.07a.867.867,0,0,0,0,1.734H9.8a.867.867,0,0,0,.616-.251l1.119-1.162,2.428,2.766a.867.867,0,0,0,.624.295h0a.867.867,0,0,0,.616-.251l1.474-1.483h1.795a.867.867,0,0,0,0-1.734Zm-6.408,4.6-1.647,1.647a.867.867,0,0,1-1.231,0L4.671,11.3A3.2,3.2,0,0,1,9.188,6.77a.867.867,0,0,0,1.231,0,3.278,3.278,0,0,1,4.517,0,3.416,3.416,0,0,1,.5.65.867.867,0,0,0,1.491-.867,5.2,5.2,0,0,0-.763-.98A4.925,4.925,0,0,0,9.8,5.028,4.925,4.925,0,0,0,2,9.034,4.873,4.873,0,0,0,3.448,12.5l4.517,4.517a2.6,2.6,0,0,0,3.676,0l1.63-1.63a.858.858,0,0,0-1.205-1.223Z" transform="translate(34 21.901)" fill="#fff"/>
+    </g>
+    <text id="Med" transform="translate(62 41)" font-size="24" font-family="Inter-Bold, Inter" font-weight="700"><tspan x="0" y="0">Med</tspan></text>
+    <text id="Track" transform="translate(114 41)" font-size="24" font-family="Inter-Regular, Inter"><tspan x="0" y="0">Track</tspan></text>
+  </g>
+</svg>

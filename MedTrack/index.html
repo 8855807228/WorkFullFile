@@ -1,0 +1,175 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedTrack</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body class="bg-right-top">
+    <div class="d-flex flex-column justify-content-between h-100">
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-lg bg-transparent py-xl-4">
+        <div class="container-fluid px-0 px-xl-5">
+          <a class="navbar-brand ms-4 ms-xl-0" href="index.html">
+            <img src="images/logo.svg" class="logo" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler me-4 me-xl-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link py-3 fw-medium text-white dropdown-toggle custom"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Platform
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link py-3 fw-medium text-white dropdown-toggle custom"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Solutions
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link py-3 fw-medium text-white"
+                  aria-current="page"
+                  href="#"
+                  >Resources</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link py-3 fw-medium text-white"
+                  aria-current="page"
+                  href="#"
+                  >About</a
+                >
+              </li>
+            </ul>
+            <button
+              class="btn btn-light ms-xl-4 mt-3 mt-lg-0 py-2 d-flex align-items-center gap-1"
+              type="submit"
+            >
+              <svg
+                viewBox="0 0 18 18"
+                height="18px"
+                width="18px"
+                class="svg-fill"
+              >
+                <use xlink:href="images/enter.svg#enter"></use>
+              </svg>
+              Sign In
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- / Nav -->
+      <!-- form -->
+      <div class="my-3 text-center">
+        <img src="images/logo.svg" class="form-logo" alt="logo" />
+        <div class="bg-white p-4 rounded-4 mt-4 login-form mx-auto px-5">
+          <h3 class="text-dark fw-semibold">
+            Welcome <span class="text-success fw-medium">back!</span>
+          </h3>
+          <p class="text-muted small">
+            Sign in to access your profile, appointments <br />
+            and settings.
+          </p>
+          <input
+            type="text"
+            class="form-control rounded-3"
+            placeholder="Enter Phone Number"
+          />
+          <a
+            href="modules/patient/patient-overview.html"
+            class="btn btn-success d-flex align-items-center justify-content-center gap-2 px-5 py-3 rounded-3 mx-auto mt-4 mb-n5 fs-16 w-fit"
+            >Get Access <img src="images/arrow-right.svg" alt="arrow right"
+          /></a>
+        </div>
+        <div
+          class="d-flex align-items-center justify-content-center mt-5 gap-4"
+        >
+          <a
+            href="modules/patient/patient-overview.html"
+            class="text-decoration-underline text-success"
+            >Patient</a
+          >
+          <a
+            href="modules/doctor/doctor-overview.html"
+            class="text-decoration-underline text-success"
+            >Doctor</a
+          >
+          <a
+            href="modules/nurse/nurse-overview.html"
+            class="text-decoration-underline text-success"
+            >Nurse</a
+          >
+          <a
+            href="modules/reception/reception-overview.html"
+            class="text-decoration-underline text-success"
+            >Reception</a
+          >
+          <a
+            href="modules/laboratorist/laboratorist-overview.html"
+            class="text-decoration-underline text-success"
+            >Laboratorist</a
+          >
+          <a
+            href="modules/pharmacist/pharmacist-overview.html"
+            class="text-decoration-underline text-success"
+            >Pharmacist</a
+          >
+        </div>
+      </div>
+      <!-- / form -->
+      <!-- Footer -->
+      <div>
+        <hr />
+        <p class="text-muted-light text-center">
+          Copyright © 2023 MedTrack. All rights reserved.
+        </p>
+      </div>
+      <!-- / Footer -->
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

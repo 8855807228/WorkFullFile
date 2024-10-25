@@ -1,0 +1,1417 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="nurse-overview.html " class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="ipd-status.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/hospitals-and-clinics.svg#hospitals-and-clinics"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> IPD Status</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="ipd-schedules.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/schedules.svg#schedules"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> IPD Schedules</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="nurse-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/Mrs.Nurse.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mrs. Nurse</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1"> IPD Status </h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4">
+                            <div class="px-4">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h6 class="fw-bold text-dark mb-0"> Patient Name (PAT-235689) </h6>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button class="btn btn-outline-success px-3 py-2" data-bs-toggle="modal" data-bs-target="#manageModal">Manage Accomodation</button>
+                                        <button class="btn btn-success px-4 py-2" data-bs-toggle="modal" data-bs-target="#dischargeModal">Discharge</button>
+                                    </div>
+                                </div>
+                                <div class="row position-relative report-headder">
+                                    <div class="col-lg-4">
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Appointment Id :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">APP-985236</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Doctor Name :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Ward & Bed :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">Room 12, Bed 15</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Patient Name :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">Mr. Patient</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Patient Id :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">PAT-2563</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-center">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Age/Sex :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">32/Male</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="row justify-content-lg-end">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Admit Date :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">July 05, 2023 (10:00 AM)</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-end">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Discharge Date :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">-</p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-lg-end">
+                                            <div class="col-lg-5">
+                                                <p class="text-muted">Status :</p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p class="text-dark fw-medium">Admitted</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="position-relative pe-5">
+                                    <div class="pe-3">
+                                    <button class="btn btn-outline-success btn-icon-green border-2 position-absolute top-0 end-0 p-2 py-1 small" data-bs-toggle="modal" data-bs-target="#summaryModal">
+                                        <svg viewBox="0 0 12 12" height="12px" width="12px" class="svg-fill">
+                                            <use xlink:href="../../images/edit-success.svg#edit-success"></use>
+                                        </svg>
+                                        Edit</button>
+                                    <div class="row justify-content-lg-end">
+                                        <div class="col-lg-3 col-xxl-2">
+                                            <p class="text-muted">Admission Summary : :</p>
+                                        </div>
+                                        <div class="col-lg-9 col-xxl-10">
+                                            <p class="text-dark mb-0">Patient have Type 2 Diabetes Mellitus, Hypertension, Hyperlipidemia, Hypothyroidism, Obesity, Osteoporosis, and Sleep Apnea.</p>
+                                            <p class="text-dark">Hospital admission required and medical team will closely monitor vital signs, glucose levels, blood pressure, and other relevant parameters.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="accordion mt-3" id="accordionExample2">
+                                    <div class="accordion-item mb-3">
+                                      <h2 class="accordion-header position-relative">
+                                        <button class="accordion-button rounded-2 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/follow.svg" alt="">
+                                                <p class="fw-semibold text-dark mb-0">Follow Up</p>
+                                            </div>
+                                        </button>
+                                        <span class="btn btn-outline-success btn-icon-green border-2 p-2 py-1 small me-3 position-absolute end-0 top-50 translate-middle" data-bs-toggle="modal" data-bs-target="#followModal">
+                                            <svg viewBox="0 0 12 12" height="12px" width="12px" class="svg-fill">
+                                                <use xlink:href="../../images/edit-success.svg#edit-success"></use>
+                                            </svg>
+                                            Edit
+                                        </span>
+                                      </h2>
+                                      <div id="collapseOne4" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1 fixed-height-sec">
+                                            <div class="card bg-white p-4 py-2 mb-3 mt-2">
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-muted">Date</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted">Perticulars</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-dark">July 12, 2023 (11:52 pm)</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted mb-2">Medicine given by Nurse (Ms. Yamini)</p>
+                                                        <p class="text-dark fw-medium mb-0">Lucamization (200mg) - 01</p>
+                                                        <p class="text-dark fw-medium mb-2">Xepration (500mg) 01</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card bg-white p-4 py-2">
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-muted">Date</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted">Perticulars</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                        <p class="text-dark">July 12, 2023 (11:52 pm)</p>
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted mb-0">Doctor Visit (Dr. Naveen Jindal)</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-lg-end">
+                                                    <div class="col-lg-3">
+                                                    </div>
+                                                    <div class="col-lg-9">
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Complaint</span> - Breathing problem</p>
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Observation</span> - Oxygen level is 85%</p>
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Diagnoses </span> - Oxygen mask provided</p>
+                                                        <p class="text-muted mb-2"><span class="fw-semibold text-black">Notes </span> - Monitor oxygen level if oxygen level goes below 80% immediately doctor</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="accordion-item mb-3">
+                                        <h2 class="accordion-header position-relative">
+                                          <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne5" aria-expanded="false" aria-controls="collapseOne5">
+                                              <div class="d-flex align-items-center gap-2">
+                                                  <img src="../../images/vitalSigns.svg" alt="">
+                                                  <p class="fw-semibold text-dark mb-0">Vital Signs</p>
+                                              </div>
+                                          </button>
+                                          <span class="btn btn-outline-success btn-icon-green border-2 p-2 py-1 small me-3 position-absolute end-0 top-50 translate-middle" data-bs-toggle="modal" data-bs-target="#signsModal">
+                                            <svg viewBox="0 0 12 12" height="12px" width="12px" class="svg-fill">
+                                                <use xlink:href="../../images/edit-success.svg#edit-success"></use>
+                                            </svg>
+                                            Edit
+                                        </span>
+                                        </h2>
+                                        <div id="collapseOne5" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                          <div class="accordion-body pb-0 pt-1">
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <thead>
+                                                    <tr class="border-bottom-light">
+                                                        <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Date</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Weight</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Blood Pressure</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Pulse</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Oxygen Level</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Temprature</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Respiration Rate</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="px-4">
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium">1.</th>
+                                                        <td class="text-black fw-medium small">July 12, 2023</td>
+                                                        <td><p class="fw-normal mb-0 text-black small">55 kgs</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">88/110</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">50</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">92%</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">97.9 F</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">30</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium">2.</th>
+                                                        <td class="text-black fw-medium small">July 11, 2023</td>
+                                                        <td><p class="fw-normal mb-0 text-black small">55 kgs</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">88/110</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">50</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">92%</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">97.2 F</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">28</p></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium">3.</th>
+                                                        <td class="text-black fw-medium small">July 10, 2023</td>
+                                                        <td><p class="fw-normal mb-0 text-black small">55 kgs</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">88/110</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">50</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">92%</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">97.5 F</p></td>
+                                                        <td><p class="fw-normal mb-0 text-black small">25</p></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+
+
+
+                                    <div class="accordion-item mb-3">
+                                    <h2 class="accordion-header position-relative">
+                                        <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne6" aria-expanded="false" aria-controls="collapseOne6">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/operations.svg" alt="">
+                                                <p class="fw-semibold text-dark mb-0">Operations</p>
+                                            </div>
+                                        </button>
+                                        <span class="btn btn-outline-success btn-icon-green border-2 p-2 py-1 small me-3 position-absolute end-0 top-50 translate-middle" data-bs-toggle="modal" data-bs-target="#operationsModal">
+                                            <svg viewBox="0 0 12 12" height="12px" width="12px" class="svg-fill">
+                                                <use xlink:href="../../images/edit-success.svg#edit-success"></use>
+                                            </svg>
+                                            Edit
+                                        </span>
+                                    </h2>
+                                    <div id="collapseOne6" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1">
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <thead>
+                                                    <tr class="border-bottom-light">
+                                                        <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Operation</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Doctors</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Nurses</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Medicines</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Equipments</th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Start Time </th>
+                                                        <th class="text-muted fw-normal py-3 bg-light">Duration </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody class="px-4">
+                                                    <tr>
+                                                        <th class="fw-normal text-black ps-4 fw-medium align-top">1.</th>
+                                                        <td class="text-black fw-medium small align-top">Roux-en-y Gastric Bypass</td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline ">Dr. Naveen Jindal</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline ">Dr. Manish Malhotra</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline ">Dr. Rohan Vadiya</p>
+                                                        </td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Sandhya</p>
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Rubina</p>
+                                                            <p class="fw-normal mb-0 text-black small">Mr. Samket</p>
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Sushma</p>
+                                                            <p class="fw-normal mb-0 text-black small">Ms. Dikhsha</p>
+                                                        </td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Rubin (200mg) - 02</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Laxmo - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Bandage - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Morphine (150ml) - 01</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Rubin (200mg) - 02</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">   Laxmo - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">    Bandage - 03</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Morphine (150ml) - 01</p>
+                                                        </td>
+                                                        <td class="align-top">
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Machine.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Cart.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Circuits.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Anesthesia Monitor.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">CO2 and Agents.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Laryngeal Mask Airways.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Surgical Table.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Patient Stretcher.</p>
+                                                            <p class="fw-normal mb-0 text-black small fit-width text-decoration-underline">Patient Stirrups.</p>
+                                                        </td>
+                                                        <td class="align-top"><p class="fw-normal mb-0 text-black small text-center">July 12, 2023<br>
+                                                            10:54 am</p></td>
+                                                        <td class="align-top"><p class="fw-normal mb-0 text-black small">01:25 hrs</p></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+
+                                    
+                                    <div class="accordion-item mb-3">
+                                        <h2 class="accordion-header position-relative">
+                                          <button class="accordion-button rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                              <div class="d-flex align-items-center gap-2">
+                                                  <img src="../../images/prescription.svg" alt="prescription">
+                                                  <p class="fw-semibold text-dark mb-0">Prescription</p>
+                                              </div>
+                                          </button>
+                                          <span class="btn btn-outline-success btn-icon-green border-2 p-2 py-1 small me-3 position-absolute end-0 top-50 translate-middle" data-bs-toggle="modal" data-bs-target="#prescriptionModal">
+                                            <svg viewBox="0 0 12 12" height="12px" width="12px" class="svg-fill">
+                                                <use xlink:href="../../images/edit-success.svg#edit-success"></use>
+                                            </svg>
+                                            Edit
+                                        </span>
+                                        </h2>
+                                        <div id="collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                          <div class="accordion-body pb-0 pt-1">
+                                              <div class="table-responsive">
+                                                  <table class="table mb-0">
+                                                      <thead>
+                                                      <tr class="border-bottom-light">
+                                                          <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Details</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Frequency</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Intake</th>
+                                                          <th class="text-muted fw-normal py-3 bg-light">Duration</th>
+                                                      </tr>
+                                                      </thead>
+                                                      <tbody class="px-4">
+                                                      <tr>
+                                                          <th class="fw-normal text-black ps-4">1.</th>
+                                                          <td> 
+                                                              <p class="mb-0 text-black fw-medium small">Metformin</p>
+                                                              <p class="mb-0 text-black fw-normal small">200 mg</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="mb-0 text-black fw-normal small">1-0-0</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">Before Food</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">3 Days</p>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <th class="fw-normal text-black ps-4 fw-medium">2.</th>
+                                                          <td> 
+                                                              <p class="mb-0 text-black fw-medium small">Sulfonylureas</p>
+                                                              <p class="mb-0 text-black fw-normal small">500 mg</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="mb-0 text-black fw-normal small">0-0-1</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">Before Food</p>
+                                                          </td>
+                                                          <td>
+                                                              <p class="fw-medium mb-0 text-black small">3 Days</p>
+                                                          </td>
+                                                      </tr>
+                                                  </tbody>
+                                                  </table>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+
+                                    <div class="accordion-item mb-3">
+                                      <h2 class="accordion-header position-relative">
+                                        <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false" aria-controls="collapseTwo3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/diagnosis.svg" alt="Diagnosis">
+                                                <p class="fw-semibold text-dark mb-0">File Records</p>
+                                            </div>
+                                        </button>
+                                        <span class="btn btn-outline-success btn-icon-green border-2 p-2 py-1 small me-3 position-absolute end-0 top-50 translate-middle" data-bs-toggle="modal" data-bs-target="#recordsModal">
+                                            <svg viewBox="0 0 12 12" height="12px" width="12px" class="svg-fill">
+                                                <use xlink:href="../../images/edit-success.svg#edit-success"></use>
+                                            </svg>
+                                            Edit
+                                        </span>
+                                      </h2>
+                                      <div id="collapseTwo3" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                <tr class="border-bottom-light">
+                                                    <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">File Name</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Responsible Person</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Uploaded Date</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">File Size</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">File Type</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Download</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="px-4">
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">1.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">2.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">3.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">4.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">5.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">Lab Reports</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-medium small">Mr. Lokesh Rana</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small d-flex align-items-center gap-1"> July 15, 2023 </p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">283.25kb</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-medium mb-0 text-black small">PDF</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-medium mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/download-success.svg" width="12px" alt="download">
+                                                            Download
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item mb-3">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button rounded-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <img src="../../images/billing.svg" alt="Billing">
+                                                    <p class="fw-semibold text-dark mb-0">Billing</p>
+                                                </div>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseThree4" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                        <div class="accordion-body pb-0 pt-1">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                <tr class="border-bottom-light">
+                                                    <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Invoice</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Invoice Date</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Amount</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Status</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="px-4">
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">1.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">INV-23658956</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-normal small">July 15, 2023 (10:52 am)</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-black small d-flex align-items-center gap-1">28,750.00</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-warning small">Pending</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-normal mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/print.svg" width="12px" alt="download">
+                                                            Print
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">2.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">INV-23658956</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-normal small">July 15, 2023 (10:52 am)</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-black small d-flex align-items-center gap-1">28,750.00</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-success small">Paid</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-normal mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/print.svg" width="12px" alt="download">
+                                                            Print
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal text-black ps-4">3.</th>
+                                                    <td> 
+                                                        <p class="mb-0 text-black fw-medium small">INV-23658956</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="mb-0 text-black fw-normal small">July 15, 2023 (10:52 am)</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-black small d-flex align-items-center gap-1">28,750.00</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="fw-normal mb-0 text-success small">Paid</p>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#"><p class="fw-normal mb-0 text-success small d-flex align-items-center gap-2">
+                                                            <img src="../../images/print.svg" width="12px" alt="download">
+                                                            Print
+                                                        </p></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+
+    <script>
+      // Customize Dropzone options
+      Dropzone.options.myDropzone = {
+        paramName: "file", // The name that will be used to transfer the file
+        maxFilesize: 5, // MB
+        maxFiles: 5,
+        acceptedFiles: ".jpg,.jpeg,.png,.gif",
+        addRemoveLinks: true,
+        init: function() {
+          this.on("success", function(file, response) {
+            console.log("File uploaded:", file.name);
+            console.log("Server response:", response);
+          });
+        }
+      };
+    </script>
+
+    <script>
+     $(function() {
+            $(document).on('click', '.btn-add', function(e) {
+                e.preventDefault();
+                var controlForm = $(this).closest('.fvrduplicate'),
+                    currentEntry = $(this).parents('.entry:first'),
+                    newEntry = $(currentEntry.clone()).appendTo(controlForm);
+                newEntry.find('input').val('');
+                controlForm.find('.entry:not(:last) .btn-add')
+                    .removeClass('btn-add').addClass('btn-remove')
+                    .removeClass('btn-success').addClass('btn-danger bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1 mt-2')
+                    .html('<img src="../../images/mius-circle.svg" width="12px" alt="">  Delete');
+            }).on('click', '.btn-remove', function(e) {
+                $(this).closest('.entry').remove();
+                return false;
+            });
+        });
+    </script>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="ipdStatusLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-5 py-4 bg-white rounded-3">
+                <h5 class="text-success fw-bold mt-2">Manage Accommodation</h5>
+                <hr>
+                <div class="bg-light p-3 rounded-3 mb-3">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-7 pe-0">
+                                    <p class="text-muted mb-0">Accommodation Ward :</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="text-dark mb-0 fw-medium">Room 12</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-7 pe-0">
+                                    <p class="text-muted mb-0">Accommodation Bed :</p>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="text-dark mb-0 fw-medium">Bed 15</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Appointement ID</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Ward</option>
+                            <option value="1">Ward No. 1</option>
+                            <option value="1">Ward No. 2</option>
+                            <option value="1">Ward No. 3</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Accomodation Bed</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Bed</option>
+                            <option value="1">Bed No. 1</option>
+                            <option value="1">Bed No. 2</option>
+                            <option value="1">Bed No. 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row align-items-center mt-2 mb-2">
+                    <div class="col-lg-12">
+                        <div class="d-flex gap-2 align-items-center justify-content-end">
+                            <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                            <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Release Accommodation </span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="summaryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+            <h5 class="text-success fw-bold mt-4">Admission Summary</h5>
+            <hr class="mb-0">
+            <div class="row targetDiv" id="div0">
+                <div class="col-lg-12">
+                <div id="group1" class="fvrduplicate">
+                    <div class="row entry mt-3">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                        <p class="mb-0 text-black">Admission Summary :</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                        <p class="p-3 rounded-2 text-dark border border-dark border-black mb-0">Patient have Type 2 Diabetes Mellitus, Hypertension, Hyperlipidemia, Hypothyroidism, Obesity, Osteoporosis, and Sleep Apnea. Hospital admission required and medical team will closely monitor vital signs, glucose levels, blood pressure, and other relevant parameters. </p>
+                        </div>
+                        <div class="form-group mt-2">
+                            <button type="button" class="btn btn-success btn-sm btn-add bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1">
+                            <img src="../../images/add-circle.svg" width="12px" alt="">
+                            Add More
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="d-flex gap-2 align-items-center justify-content-end">
+                <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                <button class="btn btn-success px-4 py-2 mb-1"><span class="px-4 py-1 d-block"> Save </span></button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="prescriptionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body p-5 pt-3 bg-white rounded-3">
+            <h5 class="text-success fw-bold mt-4">Prescription & Diagnostic Tests</h5>
+            <hr class="mb-0">
+            <div class="table-responsive">
+                <table class="table mb-0">
+                    <thead>
+                    <tr class="border-bottom-light">
+                        <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                        <th class="text-muted fw-normal py-3 bg-light">Details</th>
+                        <th class="text-muted fw-normal py-3 bg-light">Frequency</th>
+                        <th class="text-muted fw-normal py-3 bg-light">Intake</th>
+                        <th class="text-muted fw-normal py-3 bg-light">Duration</th>
+                        <th class="text-muted fw-normal py-3 bg-light"></th>
+                    </tr>
+                    </thead>
+                    <tbody class="px-4">
+                    <tr>
+                        <td class="fw-normal text-black ps-4">1.</td>
+                        <td> 
+                            <p class="mb-0 text-black fw-medium small">Metformin</p>
+                            <p class="mb-0 text-black fw-normal small">200 mg</p>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center gap-1">
+                                <input type="text" class="form-control text-center p-2" value="1" style="width: 50px;">
+                                -
+                                <input type="text" class="form-control text-center p-2" value="0" style="width: 50px;">
+                                -
+                                <input type="text" class="form-control text-center p-2" value="0" style="width: 50px;">
+                            </div>
+                        </td>
+                        <td>
+                            <select class="form-select shadow-none p-2" aria-label="Default select example">
+                                <option selected="">Before Food</option>
+                                <option value="1">After Food</option>
+                              </select>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <input type="text" class="form-control text-center p-2" value="2" style="width: 50px;">
+                                <select class="form-select shadow-none p-2" aria-label="Default select example">
+                                    <option selected="">Day(s)</option>
+                                    <option value="1">Day</option>
+                                  </select>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#"><img src="../../images/trash-red.svg" alt="trash"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="fw-normal text-black px-0">
+                            <div class="my-3 shadow rounded-3">
+                                <input type="text" class="form-control" placeholder="Enter Drug Name">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="table-responsive mt-3">
+                <table class="table mb-0">
+                    <thead>
+                    <tr class="border-bottom-light">
+                        <th class="text-muted fw-normal py-3 bg-light ps-4">No.</th>
+                        <th class="text-muted fw-normal py-3 bg-light">Diagnostic Test Name</th>
+                        <th class="text-muted fw-normal py-3 bg-light"></th>
+                    </tr>
+                    </thead>
+                    <tbody class="px-4">
+                    <tr>
+                        <td class="fw-normal text-black ps-4">1.</td>
+                        <td> 
+                            <p class="mb-0 text-black fw-medium small">ECG Test</p>
+                        </td>
+                        <td class="text-end">
+                            <a href="#" class="pe-3"><img src="../../images/trash-red.svg" alt="trash"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="fw-normal text-black px-0">
+                            <div class="my-3 shadow rounded-3">
+                                <input type="text" class="form-control" placeholder="Enter Test name">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="d-flex gap-2 align-items-center justify-content-end">
+                <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                <button class="btn btn-success px-4 py-2 mb-1"><span class="px-4 py-1 d-block"> Save </span></button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="dischargeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body p-5 pt-3 bg-white rounded-3">
+            <h5 class="text-success fw-bold mt-4">Discharge Patient</h5>
+            <hr class="mb-0">
+            <div class="rounded-3 bg-light p-3 mt-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row mb-1">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Patient Id :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">PAT-2563</p>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Appointment Id :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">APP-985236</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Doctor Name :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">Dr. Naveen Jindal</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Admitted On :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">05 July, 2023 (10:00 AM)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row mb-1">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Patient Name :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">Mr. Patient</p>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Age/Sex :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">32/Male</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Blood Group :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">A+</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p class="text-muted mb-0">Accommodation :</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="text-dark mb-0 fw-medium">Room 12 / Bed 15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-12 mb-3">
+                    <p class="text-muted mb-2">Discharge Summary</p>
+                    <textarea class="form-control" id="message-text" placeholder="Write discharge summary..."></textarea>
+                </div>
+            </div>
+            <div class="bg-light p-3 rounded-3 mb-3">
+                <div class="d-flex align-items-center gap-4 flex-wrap">
+                    <h6 class="fw-bold text-success mb-2">Total: 65,025/-</h6>
+                    <h6 class="fw-bold text-dark mb-2">Received: 50,800/-</h6>
+                    <h6 class="fw-bold text-danger mb-2">Pending: 14,800/-</h6>
+                </div>
+                <p class="small mb-0 text-muted">Note : Please clear all due before proceeding discharge.</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-xl-6">
+                    <p class="mb-0 text-muted">Admission Date/Time - 24 Aug, 2023 / 10:15 AM</p>
+                </div>
+                <div class="col-xl-6">
+                    <div class="d-flex gap-2 align-items-center justify-content-end mt-4 mt-xl-0">
+                        <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                        <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Discharge Patient </span></button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+     <!-- Modal -->
+     <div class="modal fade" id="followModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+            <h5 class="text-success fw-bold mt-4">Follow Up</h5>
+            <hr class="mb-0">
+            <div class="row targetDiv" id="div0">
+                <div class="col-lg-12">
+                    <div id="group1" class="fvrduplicate">
+                        <div class="row entry mt-3">
+                            <div class="col-md-12">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-2 text-black">Add Complaints</p>
+                                    <button type="button" class="btn btn-success btn-sm btn-add bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1">
+                                        <img src="../../images/add-circle.svg" width="12px" alt="">
+                                        Add More
+                                    </button>
+                                </div>
+                                <textarea class="form-control" placeholder="Write Complaint..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row targetDiv" id="div1">
+                <div class="col-lg-12">
+                    <div id="group1" class="fvrduplicate">
+                        <div class="row entry mt-3">
+                            <div class="col-md-12">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-2 text-black">Add Observations</p>
+                                    <button type="button" class="btn btn-success btn-sm btn-add bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1">
+                                        <img src="../../images/add-circle.svg" width="12px" alt="">
+                                        Add More
+                                    </button>
+                                </div>
+                                <textarea class="form-control" placeholder="Write Observations..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row targetDiv" id="div2">
+                <div class="col-lg-12">
+                    <div id="group1" class="fvrduplicate">
+                        <div class="row entry mt-3">
+                            <div class="col-md-12">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-2 text-black">Add Diagnoses</p>
+                                    <button type="button" class="btn btn-success btn-sm btn-add bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1">
+                                        <img src="../../images/add-circle.svg" width="12px" alt="">
+                                        Add More
+                                    </button>
+                                </div>
+                                <textarea class="form-control" placeholder="Write Diagnoses..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row targetDiv" id="div2">
+                <div class="col-lg-12">
+                    <div id="group1" class="fvrduplicate">
+                        <div class="row entry mt-3">
+                            <div class="col-md-12">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-2 text-black">Add Notes</p>
+                                    <button type="button" class="btn btn-success btn-sm btn-add bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1">
+                                        <img src="../../images/add-circle.svg" width="12px" alt="">
+                                        Add More
+                                    </button>
+                                </div>
+                                <textarea class="form-control" placeholder="Write Notes..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center mt-4">
+                <div class="col-xl-6">
+                    <p class="mb-0 text-muted">Admission Date/Time - 24 Aug, 2023 / 10:15 AM</p>
+                </div>
+                <div class="col-xl-6">
+                    <div class="d-flex gap-2 align-items-center justify-content-end mt-xl-0 mt-4">
+                        <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                        <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Add </span></button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="signsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+            <h5 class="text-success fw-bold mt-4">Vital Signs</h5>
+            <hr class="mb-0">
+            <div class="row mt-3 align-items-end">
+                <div class="col-md-6 mb-3">
+                    <p class="text-muted mb-2 mt-0">Weight (kg)</p>
+                    <input type="text" class="form-control" placeholder="Enter Weight">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="text-muted mb-2 mt-0">Pulse (Heart beats/min)</p>
+                    <input type="text" class="form-control" placeholder="Enter Pulse">
+                </div>
+            </div>
+            <div class="row mt-3 align-items-end">
+                <div class="col-md-6 mb-3">
+                    <p class="text-muted mb-2 mt-0">Temperature (°F)</p>
+                    <input type="text" class="form-control" placeholder="Enter Temprature">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <p class="text-muted mb-2 mt-0">Oxygen Level (%)</p>
+                    <input type="text" class="form-control" placeholder="Enter Level">
+                </div>
+            </div>
+            <div class="row align-items-end nowrap divider position-relative">
+                <div class="col-md-6 mb-3">
+                    <p class="text-muted mb-2 mt-0">Blood Pressure (mmHg)</p>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row align-items-end">
+                <div class="col-md-6 mb-3">
+                    <p class="text-muted mb-2 mt-0">Resp. Rate (Breaths/min)</p>
+                    <input type="text" class="form-control" placeholder="Enter Resp. Rate">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected="">Axillary (Armpit)</option>
+                        <option value="1">Bed No. 1</option>
+                        <option value="1">Bed No. 2</option>
+                        <option value="1">Bed No. 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row align-items-center mt-4">
+                <div class="col-xl-6">
+                    <p class="mb-0 text-muted">Admission Date/Time - 24 Aug, 2023 / 10:15 AM</p>
+                </div>
+                <div class="col-xl-6">
+                    <div class="d-flex gap-2 align-items-center justify-content-end mt-4 mt-xl-0">
+                        <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                        <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Add </span></button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="operationsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+            <h5 class="text-success fw-bold mt-4">Operations Details</h5>
+            <hr class="mb-0">
+            <div class="row mt-3">
+                <div class="col-lg-12 mb-3">
+                    <p class="mb-2 text-black">Operation</p>
+                    <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Operation Name">
+                </div>
+                <div class="col-lg-12 mb-3">
+                    <p class="mb-2 text-black">Doctors</p>
+                    <div class="position-relative flex-grow-1">
+                        <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                        <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Search Doctors">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p class="mb-2 text-black">Nurses</p>
+                    <div class="position-relative flex-grow-1">
+                        <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                        <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Search Nurses">
+                    </div>
+                </div>
+            </div>
+            <div class="row targetDiv" id="div0">
+                <div class="col-lg-12">
+                    <div id="group1" class="fvrduplicate">
+                        <div class="row entry mt-3">
+                            <div class="col-md-12">
+                                <p class="mb-2 text-black">Add Complaints</p>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="position-relative flex-grow-1">
+                                        <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                                        <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Enter Drug Name">
+                                    </div>
+                                    <input type="text" class="form-control bg-white rounded-2" placeholder="Qty" style="width: 100px;">
+                                    <button type="button" class="btn btn-success btn-sm btn-add bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1">
+                                        <img src="../../images/add-circle.svg" width="12px" alt="">
+                                        Add More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row targetDiv" id="div0">
+                <div class="col-lg-12">
+                    <div id="group1" class="fvrduplicate">
+                        <div class="row entry mt-3">
+                            <div class="col-md-12">
+                                <p class="mb-2 text-black">Equipements</p>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="flex-grow-1">
+                                        <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Enter Equipment Names">
+                                    </div>
+                                    <button type="button" class="btn btn-success btn-sm btn-add bg-transparent p-0 text-dark border-0 d-flex align-items-center gap-1">
+                                        <img src="../../images/add-circle.svg" width="12px" alt="">
+                                        Add More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center my-3">
+                <div class="col-lg-4">
+                    <p class="mb-0 text-muted">Date</p>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-lg-4">
+                    <p class="mb-0 text-muted">Start Time</p>
+                    <input type="time" class="form-control">
+                </div>
+                <div class="col-lg-4">
+                    <p class="mb-0 text-muted">End Time</p>
+                    <input type="time" class="form-control">
+                </div>
+            </div>
+            <div class="d-flex gap-2 align-items-center justify-content-end mt-4">
+                <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Add </span></button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="recordsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-body p-5 pt-3 bg-white rounded-3">
+                <h5 class="text-success fw-bold mt-4">File Records</h5>
+                <hr class="mb-0">
+                <div class="row mt-3">
+                    <div class="col-lg-12 mb-3">
+                        <p class="mb-2 text-black">File Name</p>
+                        <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Enter File Name">
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <p class="mb-2 text-black">File Upload</p>
+                        <form action="/upload" class="dropzone rounded-3 border border-dashed bg-light text-black" id="myDropzone">
+                            <div class="fallback">
+                            <input name="file" type="file" multiple />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-xl-6">
+                            <p class="mb-0 text-muted">Admission Date/Time - 24 Aug, 2023 / 10:15 AM</p>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="d-flex gap-2 align-items-center justify-content-end mt-4 mt-xl-0">
+                                <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                                <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Discharge Patient </span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

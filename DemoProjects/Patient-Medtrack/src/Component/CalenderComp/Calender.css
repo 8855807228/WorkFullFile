@@ -1,0 +1,30 @@
+.rbc-calendar {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  max-height: 50vh;
+  overflow-x: scroll;
+  padding: 10px;
+}
+.container {
+  padding: 25px;
+  padding-bottom: 230px;
+  padding-right: 30px;
+}
+
+.rbc-toolbar {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.rbc-month-view {
+  border-spacing: 0;
+  background-color: #f9f9f9;
+}
+
+.rbc-event {
+  background-color: #f5ba13;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+}

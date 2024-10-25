@@ -1,0 +1,352 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="../../modules/patient/patient-overview.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="../../modules/patient/patient-appointments.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/appointments.svg#appointments"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Appointments</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="../../modules/patient/hospitals-and-clinics.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/hospitals-and-clinics.svg#hospitals-and-clinics"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text">Hospitals & Clinics</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="../../modules/patient/patient-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/user.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mr. Patient</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1"> Hospitals & Clinics </h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4">
+                            <div class="px-4">
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap flex-wrap">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="border p-4 py-4 rounded-1">
+                                            <img src="../../images/max.png" width="80px" class="py-3 my-2" alt="">
+                                        </div>
+                                        <div>
+                                            <h4 class="fw-bold text-dark mb-1 mt-2"> Max Super Speciality Hospital </h4>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <p class="badge text-bg-success rounded-1 py-2 mb-0">4.1</p>
+                                                <div class="rating d-flex align-items-center">
+                                                    <img src="../../images/star-yellow.svg" width="16px" alt="">
+                                                    <img src="../../images/star-yellow.svg" width="16px" alt="">
+                                                    <img src="../../images/star-yellow.svg" width="16px" alt="">
+                                                    <img src="../../images/star-yellow.svg" width="16px" alt="">
+                                                    <img src="../../images/star light.svg" width="16px" alt="">
+                                                </div>
+                                                <p class="small text-muted mb-0">2,187 Rating</p>
+                                            </div>
+                                            <p class="small text-black mt-2 mb-2">B-498 A, Noida Sector 19, Delhi - 201301 (Opposite Fortune Hotel)</p>
+                                            <div class="d-flex gap-3">
+                                                <p class="small text-black mb-2">Multispeciality</p>
+                                                <p class="small text-black">  |  </p>
+                                                <p class="small text-black mb-2">27 Yrs of Establishment</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-light border-light ms-xl-auto mt-3 mt-lg-0 py-3 px-3 d-flex align-items-center gap-1 mb-3" type="submit">
+                                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill">
+                                                <use xlink:href="../../images/call.svg#call"></use>
+                                            </svg>
+                                            07895623560
+                                        </button>
+                                        <div class="d-flex align-items-center gap-2">
+                                           <a href="#"><img src="../../images/img-1.png" alt=""></a>
+                                           <a href="#"><img src="../../images/img-2.png" alt=""></a>
+                                           <a href="#"><img src="../../images/img-3.png" alt=""></a>
+                                           <a href="#"><div class="position-relative">
+                                                <div class="position-absolute text-center text-success fw-semibold w-100 h-100 bg-overlay-light d-flex align-items-center justify-content-center">+32 <br> more</div>
+                                                <img src="../../images/img-4.png" alt="">
+                                            </div></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                <div class="row">
+                                    <div class="col-lg-8 col-xxl-9">
+                                        <div class="card border-0 bg-white py-4 mt-4 h-100">
+                                            <div class="px-4">
+                                        <h5 class="text-dark fw-bold">About Max Super Hospital</h5>
+                                        <p class="text-muted">Max Healthcare Institute Limited ("Max Healthcare") is one of India’s largest healthcare organizations. We operate 17 healthcare facilities (3500+ beds) across the NCR Delhi, Haryana, Punjab, Uttarakhand and Maharashtra. Almost 85% of our bed capacity is in Metro/Tier 1 cities. Apart from hospitals, Max Healthcare also operates a homecare business and pathology business under brand names Max@Home and Max Labs respectively.  Max@Home offers health and wellness services at home while Max Lab provides Pathology Services outside our hospital network.</p>
+                                        <h5 class="text-dark fw-bold mt-4 mb-3">Services Offered</h5>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked">
+                                                        Ovarian Diseases
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked1">
+                                                        Hypertensive Medication
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked2">
+                                                        Hypertension Management
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked3" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked3">
+                                                        Spinal Disc Surgery
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked4" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked4">
+                                                        General Diagnostic Radiology
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked5" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked5">
+                                                        Laminectomy
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked6" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked6">
+                                                        Epilepsy Treatment
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked7" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked7">
+                                                        ENT Check Up (General)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked8" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked8">
+                                                        Hip Replacement
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked9" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked9">
+                                                        Cough Clinic
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked10" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked10">
+                                                        Doctors for Knee Replacement
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked11" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked11">
+                                                        Dialysis/Haemodialysis
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked12" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked12">
+                                                        Surgeons For Laminectomy
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked13" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked13">
+                                                        Correction of Deformities
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked14" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked14">
+                                                        D
+                                                        octors for Knee Replacement
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked15" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked15">
+                                                        Dialysis/Haemodialysis
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked16" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked16">
+                                                        Surgeons For Laminectomy
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked17" checked>
+                                                    <label class="form-check-label text-muted" for="flexCheckChecked17">
+                                                        Correction of Deformities
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-xxl-3">
+                                        <div class="card border-0 bg-white py-4 mt-4 h-100">
+                                            <div class="px-4">
+                                        <h5 class="text-dark fw-bold mb-3">Book an Appointment</h5>
+                                        <p class="text-muted mb-2">Department</p>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Cardiology (Heart)</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <p class="text-muted mb-2 mt-3">Location</p>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Max Hospital, Noida</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                        <p class="text-muted mb-2 mt-3">Date</p>
+                                        <input type="date" class="form-control">
+                                        <p class="text-muted mb-2 mt-3">Time</p>
+                                        <input type="time" class="form-control" placeholder="09:00 PM - 10:00 PM">
+                                        <div class="d-grid">
+                                            <button class="btn btn-success py-3 mt-3 rounded-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Book an Appointment</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body text-center p-5 pt-3">
+          <img src="../../images/check.png" alt="check">
+          <h5 class="text-success fw-bold">Your Appointment Booked Successfully!</h5>
+          <p class="text-muted">Thank you for booking your appointment. <br>
+            You will get a confirmation message regarding this appointment soon.</p>
+        <div class="row position-relative report-headder text-start my-4">
+            <div class="col-lg-4">
+                <p class="text-muted mb-2">Department</p>
+                <p class="text-dark">Cardiology (Heart)</p>
+            </div>
+            <div class="col-lg-4 ps-4">
+                <p class="text-muted mb-2">Location</p>
+                <p class="text-dark">Max Hospital</p>
+            </div>
+            <div class="col-lg-4 ps-4">
+                <p class="text-muted mb-2">Date & Time</p>
+                <p class="text-dark mb-0">July 21, 2023</p>
+                <p class="text-dark">09:00 PM - 10:00 PM</p>
+            </div>
+        </div>
+        <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

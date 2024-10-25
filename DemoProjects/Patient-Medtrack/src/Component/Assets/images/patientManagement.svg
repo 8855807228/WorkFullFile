@@ -1,0 +1,10 @@
+<svg id="patientManagement" width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.0446 16.304V14.304C14.1044 13.308 13.7682 12.3287 13.1093 11.5795C12.4503 10.8303 11.522 10.3718 10.5266 10.304H4.36856C3.3731 10.3718 2.44479 10.8303 1.78585 11.5795C1.12691 12.3287 0.790737 13.308 0.85056 14.304V16.304" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.34961 6.84998C9.00646 6.84998 10.3496 5.50683 10.3496 3.84998C10.3496 2.19312 9.00646 0.849976 7.34961 0.849976C5.69276 0.849976 4.34961 2.19312 4.34961 3.84998C4.34961 5.50683 5.69276 6.84998 7.34961 6.84998Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<mask id="path-3-outside-1_21_3" maskUnits="userSpaceOnUse" x="12.9121" y="1.57697" width="6" height="6">
+<rect x="12.9121" y="1.57697" width="6" height="6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9121 1.57697V7.57697ZM18.9121 4.57697H12.9121Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.9121 1.57697V7.57697ZM18.9121 4.57697H12.9121Z" />
+<path d="M15.4121 1.57697V7.57697H16.4121V1.57697H15.4121ZM18.9121 4.07697H12.9121V5.07697H18.9121V4.07697Z"  mask="url(#path-3-outside-1_21_3)"/>
+</svg>

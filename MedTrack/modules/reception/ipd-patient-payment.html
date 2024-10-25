@@ -1,0 +1,716 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-overview.html " class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="patient-management.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 20 14" height="14px" width="20px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/patientManagement.svg#patientManagement"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Patient Management</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="get-payments.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/rupee.svg#rupee"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Get Payments</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="billing-and-invoices.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/billingInvoice.svg#billingInvoice"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Billing & Invoices</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/mrsReception.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mrs. Reception</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1">Direct patient</h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4 h-100">
+                            <div class="px-4">
+                                <div class="row mt-3 align-items-end">
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" value="PAT-23568" disabled>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected="">Select Appointment Id</option>
+                                            <option value="1">APP-458214</option>
+                                            <option value="1">APP-458438</option>
+                                            <option value="1">APP-458428</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="bg-light p-3 rounded-3 mb-3">
+                                            <div class="d-flex align-items-center justify-content-around gap-2 flex-wrap">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <p class="text-muted mb-0">Patient Name :</p>
+                                                    <p class="text-dark mb-0 fw-medium">Mr. Patient</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <p class="text-muted mb-0">Age/Sex :</p>
+                                                    <p class="text-dark mb-0 fw-medium">32/Male</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <p class="text-muted mb-0">Blood Group :</p>
+                                                    <p class="text-dark mb-0 fw-medium">A+</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <p class="text-muted mb-0">Contact No. :</p>
+                                                    <p class="text-dark mb-0 fw-medium">+91-9562356896</p>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <p class="text-muted mb-0">Doctor Name :</p>
+                                                    <p class="text-dark mb-0 fw-medium">Dr. Naveen Jindal</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-2">
+                                        <div class="accordion accordion-multicolor" id="accordionExample">
+                                            <div class="accordion-item mb-3">
+                                              <h2 class="accordion-header">
+                                                <button class="accordion-button rounded-2 fw-medium text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                  Service Consumption
+                                                </button>
+                                              </h2>
+                                              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body pb-0 pt-2">
+                                                    <div class="table-responsive">
+                                                        <table class="table mb-0">
+                                                            <thead>
+                                                            <tr class="border-bottom-light">
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap"></th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">S.No.</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">App Id</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">Invoice Id </th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">Invoice Date</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">Total Amount</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">Paid Amount</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">Balance Amount</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">Payment Mode</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light text-nowrap">Status</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="px-4">
+                                                            <tr class="border-bottom">
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">1</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="border-bottom">
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">2</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <p class="fw-medium mb-0 small text-danger px-4 bg-danger-light rounded-1 w-fit py-2">Pending</p>
+                                                                        <a href="#" class="btn btn-success px-3 py-1">PAY</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="border-bottom">
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">3</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">4</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button class="accordion-button rounded-2 fw-medium text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    New Invoice
+                                                </button>
+                                              </h2>
+                                              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body pt-2 pb-0">
+                                                    <div class="table-responsive">
+                                                        <table class="table mb-0">
+                                                            <thead>
+                                                            <tr class="border-bottom-light">
+                                                                <th class="text-muted fw-normal py-3 bg-light"></th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">S.No.</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">App Id</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">Invoice Id </th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">Invoice Date</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">Total Amount</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">Paid Amount</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">Balance Amount</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">Payment Mode</th>
+                                                                <th class="text-muted fw-normal py-3 bg-light">Status</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="px-4">
+                                                            <tr class="border-bottom">
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">1</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="border-bottom">
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">2</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <p class="fw-medium mb-0 small text-danger px-4 bg-danger-light rounded-1 w-fit py-2">Pending</p>
+                                                                        <a href="#" class="btn btn-success px-3 py-1">PAY</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="border-bottom">
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">3</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="fw-normal text-black fw-medium">
+                                                                    <a href="#">
+                                                                        <img src="../../images/tabl-btn-plus-dark.svg" alt="">
+                                                                    </a>
+                                                                </th>
+                                                                <td class="text-success fw-medium small">4</td>
+                                                                <td class="text-success fw-medium small">APP-985236</td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">325689562</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">05-Sep-2023 & 9:31 PM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">15,000.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">0.00</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 text-dark small">Cash</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Paid</p>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="table-responsive">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                <tr class="border-bottom-light">
+                                                    <th class="text-muted fw-normal py-3 bg-light">Particulars</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Amount</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Quantity</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Discount</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">GST</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Total</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Pay Type</th>
+                                                    <th class="text-muted fw-normal py-3 bg-light">Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="px-4">
+                                                <tr>
+                                                    <td class="fw-normal text-black">
+                                                        <div class="position-relative">
+                                                            <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                                                            <input type="text" class="form-control bg-white rounded-2 py-2" placeholder="Search Schedule">
+                                                        </div> 
+                                                    </td>
+                                                    <td class="fw-normal text-black">
+                                                        <input type="text" class="form-control text-center p-2" value="800">
+                                                    </td>
+                                                    <td> 
+                                                        <input type="text" class="form-control text-center p-2" value="01" style="width: 50px;">
+                                                    </td>
+                                                    <td> 
+                                                        <input type="text" class="form-control text-center p-2" value="0" style="width: 50px;">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control text-center p-2" value="0 (0%)" style="width: 50px;">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control text-center p-2" value="800.00" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <select class="form-select shadow-none p-2" aria-label="Default select example">
+                                                                <option selected="">One Time</option>
+                                                                <option value="1">Two Times</option>
+                                                                <option value="1">Three Times</option>
+                                                              </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <a href="#"><img src="../../images/plus-success.svg" width="28px" alt="trash"></a>
+                                                            <button class="btn btn-outline-success px-2 py-1">Reset</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-normal text-black">
+                                                        <div class="position-relative">
+                                                            <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                                                            <input type="text" class="form-control bg-white rounded-2 py-2" placeholder="Search Schedule">
+                                                        </div> 
+                                                    </td>
+                                                    <td class="fw-normal text-black">
+                                                        <input type="text" class="form-control text-center p-2" value="800">
+                                                    </td>
+                                                    <td> 
+                                                        <input type="text" class="form-control text-center p-2" value="01" style="width: 50px;">
+                                                    </td>
+                                                    <td> 
+                                                        <input type="text" class="form-control text-center p-2" value="0" style="width: 50px;">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control text-center p-2" value="0 (0%)" style="width: 50px;">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control text-center p-2" value="800.00" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <select class="form-select shadow-none p-2" aria-label="Default select example">
+                                                                <option selected="">One Time</option>
+                                                                <option value="1">Two Times</option>
+                                                                <option value="1">Three Times</option>
+                                                              </select>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <a href="#"><img src="../../images/minus-danger.svg" width="28px" alt="trash"></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <hr>
+                                        <div class="row mt-4">
+                                            <div class="col-lg-5">
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-muted fw-medium">Other Charges :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control fw-medium" value="500">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-muted fw-medium">Total Discount :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control fw-medium" value="0.00">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-muted fw-medium">GST Amount :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control fw-medium" value="0.00">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-danger fw-medium">Balance Amount :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control fw-medium border-danger text-danger" value="300.00">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2"></div>
+                                            <div class="col-lg-5">
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-muted fw-medium">Sub Total :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control fw-medium" value="800.00">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-muted fw-medium">Total Payment :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control fw-medium" value="1,300.00">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-success fw-medium">Paid Amount :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <input type="text" class="form-control fw-medium text-success border-success" value="1,000.00">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center mb-3">
+                                                    <div class="col-lg-4 text-lg-end">
+                                                        <p class="mb-0 text-danger fw-medium">Payment Mode :</p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <select class="form-select fw-medium" aria-label="Default select example">
+                                                            <option selected="">Select Payment Mode</option>
+                                                            <option value="1">UPI</option>
+                                                            <option value="1">Cash</option>
+                                                            <option value="1">Net banking</option>
+                                                            <option value="1">Bank Transfer</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row my-2">
+                                            <div class="col-12 text-end">
+                                                <button class="btn btn-success px-3 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit payment</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5 pt-3">
+                <img src="../../images/check.png" alt="check">
+                <h5 class="text-success fw-bold">Payment Submitted Successfully!</h5>
+                <h5 class="text-dark fw-bold mt-3 mb-5">Rs. 1,000.00</h5>
+                <div class="row position-relative report-headder text-start my-4">
+                    <div class="col-lg-4">
+                        <p class="text-muted mb-2">Invoice Id</p>
+                        <p class="text-dark">2356856985</p>
+                    </div>
+                    <div class="col-lg-4 ps-4">
+                        <p class="text-muted mb-2">Patient Name</p>
+                        <p class="text-dark">Mr. Patient (PAT-235689)</p>
+                    </div>
+                    <div class="col-lg-4 ps-4">
+                        <p class="text-muted mb-2">Date & Time</p>
+                        <p class="text-dark mb-0">July 21, 2023</p>
+                        <p class="text-dark">09:00 PM - 10:00 PM</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 align-items-center justify-content-center flex-wrap">
+                    <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1">
+                        <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                            <use xlink:href="../../images/print-btn.svg#print-btn"></use>
+                        </svg>
+                        <span class="py-1 d-block"> Print </span>
+                    </button>
+                    <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1">
+                        <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                            <use xlink:href="../../images/download-btn.svg#download-btn"></use>
+                        </svg>
+                        <span class="py-1 d-block"> Download </span>
+                    </button>
+                    <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1">
+                        <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-2">
+                            <use xlink:href="../../images/email-btn.svg#email-btn"></use>
+                        </svg>
+                        <span class="py-1 d-block"> Email </span>
+                    </button>
+                    <button class="btn btn-outline-dark px-3 py-2 mb-1 d-flex align-items-center gap-1">
+                        <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success mt-1">
+                            <use xlink:href="../../images/whatsapp-btn.svg#whatsapp-btn"></use>
+                        </svg>
+                        <span class="py-1 d-block"> Whatsapp </span>
+                    </button>
+                    <a href="billing-and-invoices.html" class="btn btn-outline-success px-4 py-2 mb-1">
+                        <span class="px-4 py-1 d-block"> Close </span>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+</body>
+</html>

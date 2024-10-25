@@ -1,0 +1,393 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="laboratorist-overview.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="diagnosis-report.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/diagnosis-report.svg#diagnosis-report"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Diagnosis Report</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="manage-blood-bank.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/bloodBank.svg#bloodBank"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Manage Blood Bank</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="manage-blood-doner.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/manageDoner.svg#manageDoner"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Manage Blood Donor</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="laboratorist-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/laboratorist.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mrs. Laboratorist</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1"> Manage Blood Bank </h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4">
+                            <div class="px-4">
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="border p-1 rounded-1">
+                                            <img src="../../images/bloodBankSuccess.svg" alt="">
+                                        </div>
+                                        <p class="text-grey fw-medium mb-0 text-black"> Status of Blood Bank </p>
+                                    </div>
+                                    <div class="position-relative">
+                                        <img src="../../images/search.svg" class="position-absolute search-icon" alt="search">
+                                        <input type="text" class="form-control bg-white rounded-2 search-field py-2" placeholder="Search Diagnosis Report">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr class="border-bottom-light">
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap ps-4">No.</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Blood Group</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Unit Status</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Updated Date & Time</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap text-center">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="px-4">
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">01</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">Today (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">02</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">Today (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">03</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">Today (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">04</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">Today (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">05</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">Today (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">06</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">Today (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">07</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">July 15, 2023 (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">08</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">July 15, 2023 (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">09</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">July 15, 2023 (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="fw-normal text-black ps-4 fw-medium">10</th>
+                                            <td class="text-success fw-medium small">A+</td>
+                                            <td class="fw-medium text-dark small">55 Units</td>
+                                            <td class="fw-medium text-dark small">July 15, 2023 (10:00 am)</td>
+                                            <td class="d-flex justify-content-center">
+                                                <button class="btn btn-success fw-medium rounded-1 py-2 px-3 mb-0 text-warning d-flex gap-2 align-items-center w-fit" data-bs-toggle="modal" data-bs-target="#donateBlood">
+                                                    <img src="../../images/donate-success.svg" width="9px" alt=""> Donate </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between px-4">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                      <li class="page-item">
+                                        <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Previous">
+                                         <span><img src="../../images/chevron-left.svg" alt=""></span>
+                                        </a>
+                                      </li>
+                                      <li class="page-item active ms-3"><a class="page-link px-3 shadow-none rounded-1 text-black" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">3</a></li>
+                                      <li class="page-item ms-3">
+                                        <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Next">
+                                          <span><img src="../../images/chevron-right.svg" alt=""></span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </nav>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <p class="mb-0 text-muted text-nowrap">Showing to 10 of 50 entries</p>
+                                    <select class="form-select shadow-none" aria-label="Default select example">
+                                        <option selected="">10 entries</option>
+                                        <option value="1">20 entries</option>
+                                        <option value="2">30 entries</option>
+                                        <option value="3">40 entries</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+    <script>
+         var options = {
+          series: [{
+          name: 'Reports',
+          data: [44, 55, 57, 56, 61, 58, 63],
+          color: '#2C8073'
+        }, {
+          name: 'Donors',
+          data: [76, 85, 101, 98, 87, 105, 91],
+          color: '#FFD66B'
+        }],
+          chart: {
+          type: 'bar',
+          height: 315
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 2,
+          colors: ['transparent']
+        },
+        xaxis: {
+          categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val + " Patients"
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#nurseChart"), options);
+        chart.render();
+    </script>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="donateBlood" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+        <div class="modal-body p-5 pt-3 bg-white rounded-3">
+            <h5 class="text-success fw-bold mt-4">Donate Blood</h5>
+            <hr class="mb-0">
+            <div class="row mt-3">
+                <div class="col-lg-6 mb-3">
+                    <p class="mb-2 text-black">Patient Id</p>
+                    <div class="position-relative">
+                        <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                        <input type="text" class="form-control bg-white rounded-2 " placeholder="Search Patient Id">
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <p class="mb-2 text-black">Patient Name</p>
+                    <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Patient Name">
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <p class="mb-2 text-black">Age/Sex</p>
+                    <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Age/Sex">
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <p class="mb-2 text-black">Blood Group</p>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected="">A+</option>
+                        <option value="1">AB+</option>
+                        <option value="1">B+</option>
+                        <option value="1">O+</option>
+                        <option value="1">O-</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <p class="mb-2 text-black">Donate (Units)</p>
+                    <input type="text" class="form-control bg-white rounded-2 w-100" placeholder="Enter units">
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <p class="mb-2 text-black">Date & Time</p>
+                    <input type="date" class="form-control bg-white rounded-2 w-100" placeholder="24 Aug, 2023">
+                </div>
+                <div class="col-lg-12">
+                    <div class="row justify-content-end">
+                        <div class="col-xl-6">
+                            <div class="d-flex gap-2 align-items-center justify-content-end mt-4 mt-xl-0">
+                                <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Close </span></button>
+                                <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-4 py-1 d-block"> Add </span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

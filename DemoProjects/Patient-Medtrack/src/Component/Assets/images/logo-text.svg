@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="115" height="29" viewBox="0 0 115 29">
+  <g id="logo-text" transform="translate(-62 -18)">
+    <text id="Med" transform="translate(62 41)" font-size="24" font-family="Inter-Bold, Inter" font-weight="700"><tspan x="0" y="0">Med</tspan></text>
+    <text id="Track" transform="translate(114 41)" font-size="24" font-family="Inter-Regular, Inter"><tspan x="0" y="0">Track</tspan></text>
+  </g>
+</svg>

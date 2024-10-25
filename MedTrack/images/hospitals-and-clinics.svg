@@ -1,0 +1,7 @@
+<svg id="hospitals-and-clinics" xmlns="http://www.w3.org/2000/svg" width="18.037" height="15.461" viewBox="0 0 18.037 15.461">
+  <g id="_1" data-name="1" transform="translate(-2 -6)">
+    <path id="Path_8" data-name="Path 8" d="M17.461,16.865H9.086a.644.644,0,0,0-.644.644v2.577H3.288V13.644a.644.644,0,1,0-1.288,0v9.663a.644.644,0,1,0,1.288,0V21.374H18.749v1.933a.644.644,0,1,0,1.288,0V19.442A2.579,2.579,0,0,0,17.461,16.865Z" transform="translate(0 -2.491)"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(4 14)"/>
+    <path id="Path_9" data-name="Path 9" d="M14.577,6a.644.644,0,0,0-.644.644V7.933H12.644a.644.644,0,1,0,0,1.288h1.288v1.288a.644.644,0,1,0,1.288,0V9.221h1.288a.644.644,0,1,0,0-1.288H15.221V6.644A.644.644,0,0,0,14.577,6Z" transform="translate(-3.558)"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+.medtrack img {
+  width: 40px;
+  margin-right: 40px;
+  margin-left: 10px;
+}
+.medtrack h4 {
+  padding-top: 10px;
+  font-family: cursive;
+  text-transform: capitalize;
+}

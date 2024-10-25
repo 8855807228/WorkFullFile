@@ -1,0 +1,429 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="../../modules/patient/patient-overview.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text">Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="../../modules/patient/patient-appointments.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/appointments.svg#appointments"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text">Appointments</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="../../modules/patient/hospitals-and-clinics.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/hospitals-and-clinics.svg#hospitals-and-clinics"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text">Hospitals & Clinics</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="../../modules/patient/patient-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/user.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mr. Patient</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1"> Appointements </h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4">
+                            <div class="px-4">
+                                <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="border p-1 rounded-1">
+                                            <img src="../../images/hospital-building.svg" alt="">
+                                        </div>
+                                        <p class="text-grey fw-medium mb-0 text-black">List of Appointments</p>
+                                    </div>
+                                    <div class="position-relative">
+                                        <img src="../../images/search.svg" class="position-absolute search-icon" alt="search">
+                                        <input type="text" class="form-control bg-white rounded-2 search-field py-2" placeholder="Search Appointments">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr class="border-bottom-light">
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap ps-4">No.</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Appointment ID</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Doctor</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Department</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Date</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Time</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Status</th>
+                                        <th class="text-muted fw-normal py-3 bg-light text-nowrap">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="px-4">
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">01</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Endocrinology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-warning px-4 bg-warning-light rounded-1 w-fit py-2">Progress</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">02</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Urology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-warning px-4 bg-warning-light rounded-1 w-fit py-2">Progress</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">03</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Neurology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">04</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Neurology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">05</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Endocrinology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">06</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Endocrinology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">07</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Endocrinology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">08</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Endocrinology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">09</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Endocrinology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="fw-normal text-black ps-4 fw-medium">10</th>
+                                        <td class="text-success fw-medium small">APP-98547</td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="../../images/user.jpg" width="20px" height="20px" class="object-fit-cover rounded-pill" alt="">
+                                                <p class="fw-medium mb-0 text-dark small">Dr. Naveen Jindal</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">Endocrinology</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">July 05, 2023</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 text-dark small">10:00 am</p>
+                                        </td>
+                                        <td>
+                                            <p class="fw-medium mb-0 small text-success px-4 bg-success-light rounded-1 w-fit py-2">Completed</p>
+                                        </td>
+                                        <td>
+                                            <a href="../../modules/patient/patient-reports.html" class="badge text-bg-success rounded-1 py-2 mb-0"><img src="../../images/view.svg" alt=""></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between px-4">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                      <li class="page-item">
+                                        <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Previous">
+                                         <span><img src="../../images/chevron-left.svg" alt=""></span>
+                                        </a>
+                                      </li>
+                                      <li class="page-item active ms-3"><a class="page-link px-3 shadow-none rounded-1 text-black" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link px-3 border-0 bg-transparent shadow-none text-black" href="#">3</a></li>
+                                      <li class="page-item ms-3">
+                                        <a class="page-link h-100 d-flex align-items-center shadow-none bg-transparent px-3 rounded-1" href="#" aria-label="Next">
+                                          <span><img src="../../images/chevron-right.svg" alt=""></span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </nav>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <p class="mb-0 text-muted text-nowrap">Showing to 10 of 50 entries</p>
+                                    <select class="form-select shadow-none" aria-label="Default select example">
+                                        <option selected>10 entries</option>
+                                        <option value="1">20 entries</option>
+                                        <option value="2">30 entries</option>
+                                        <option value="3">40 entries</option>
+                                      </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+</body>
+</html>

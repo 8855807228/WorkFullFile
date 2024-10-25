@@ -1,0 +1,672 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<body>
+    <!-- content wrapper -->
+    <div class="wrapper h-100 d-flex">
+        <!-- sidebar -->
+        <div class="sidebar bg-white pt-3">
+            <a href="../../index.html" class="px-3 medTrackLogo">
+                <img src="../../images/logo-badge.svg" class="logo-badge" alt="logo">
+                <img src="../../images/logo-text.svg" class="logo-text" alt="logo">
+            </a>
+            <ul class="sidebar-links list-unstyled my-5">
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-overview.html " class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/overview.svg#overview"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text">Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2 active">
+                    <a href="patient-management.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 20 14" height="14px" width="20px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/patientManagement.svg#patientManagement"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Patient Management</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="get-payments.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/rupee.svg#rupee"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Get Payments</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="billing-and-invoices.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/billingInvoice.svg#billingInvoice"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Billing & Invoices</span>
+                    </a>
+                </li>
+                <li class="sidebar-link d-flex align-items-center gap-2">
+                    <a href="reception-profile.html" class="fw-medium">
+                        <div class="svg-icon">
+                            <svg viewBox="0 0 18 18" height="18px" width="18px" class="svg-fill svg-fill-success">
+                                <use xlink:href="../../images/profile.svg#profile"></use>
+                            </svg>
+                        </div>
+                        <span class="sidebar-text"> Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / sidebar -->
+        <!-- content -->
+        <div class="content">
+            <!-- top bar -->
+            <div class="bg-white border-bottom p-3 top-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="toggle"><img src="../../images/main-menu.svg" alt=""></div>
+                    <div class="w-fit ms-auto d-flex align-items-center gap-3 px-4">
+                        <div class="dropdown">
+                        <a href="javascript:void(0)" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg viewBox="0 0 20 20" height="20px" width="20px" class="svg-fill svg-fill-success">
+                                    <use xlink:href="../../images/bell.svg#bell"></use>
+                                </svg>
+                        </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <span class="text-muted-light">|</span>
+                        <a href="#" class="d-flex align-items-center gap-2">
+                            <img src="../../images/mrsReception.jpg" width="32px" height="32px" class="object-fit-cover rounded-pill" alt="">
+                            <p class="fw-medium mb-0 text-dark">Mrs. Reception</p>
+                            <img src="../../images/right-circle.svg" alt="right">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- / top bar -->
+            <div class="p-4 content-top">
+                <div class="row h-calc">
+                    <div class="col-12 mb-3">
+                        <h4 class="fw-bold text-dark mb-1">Patient Management</h4>
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 bg-white py-4 h-100">
+                            <div class="px-4">
+                                <div class="row justify-content-center my-4">
+                                    <div class="col-lg-6 col-xxl-5">
+                                        <h4 class="fw-bold text-dark mb-1 text-center mb-4">Search Patient</h4>
+                                        <div class="position-relative">
+                                            <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                                            <input type="text" class="form-control bg-white rounded-2 py-3" placeholder="Search Patient ID">
+                                        </div>
+                                        <div class="row justify-content-center my-4">
+                                            <div class="col-lg-6">
+                                                <hr class="border-muted">
+                                                <div class="w-100 text-center" style="margin-top: -28px;">
+                                                    <span class="mx-auto bg-white w-fit px-2 text-muted fw-semibold">Or</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap pt-1">
+                                            <button class="btn btn-warning px-3 py-2 fw-semibold text-success" data-bs-toggle="modal" data-bs-target="#addPatient">
+                                                <img src="../../images/plusSuccess.svg" alt="">
+                                                Add Patient
+                                            </button>
+                                            <button class="btn btn-success px-3 py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#giveAppointment">
+                                                <img src="../../images/plusLight.svg" alt="">
+                                                Give Appointment
+                                            </button>
+                                            <button class="btn btn-success px-3 py-2 fw-semibold" data-bs-toggle="modal" data-bs-target="#admitPatient">
+                                                <img src="../../images/plusLight.svg" alt="">
+                                                Admit Patient
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+    <!-- / content wrapper -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function() {
+            wrapper.classList.toggle('collapsed');
+        }
+    </script>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="addPatient" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3" >
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="text-success fw-bold mt-4">Add Patient</h5>
+                    <h5 class="text-dark fw-bold mt-4">PAT-25632</h5>
+                </div>
+                <hr class="mb-0">
+                <div class="modal-scrollable">
+                <div class="row align-items-end">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Patient Name</p>
+                        <input type="text" class="form-control" placeholder="Enter Patient Name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Date of Birth</p>
+                        <input type="date" class="form-control" placeholder="Enter Date">
+                    </div>
+                </div>
+                <div class="row align-items-end">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Gender</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Gender</option>
+                            <option value="1">Male</option>
+                            <option value="1">Female</option>
+                            <option value="1">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Blood Group</p>
+                        <input type="text" class="form-control" placeholder="Enter Blood Group">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Height (cm)</p>
+                        <input type="text" class="form-control" placeholder="Enter Height">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Weight (kg)</p>
+                        <input type="text" class="form-control" placeholder="Enter Weight">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <p class="text-muted mb-2 mt-0">Aadhaar Number</p>
+                        <input type="text" class="form-control" placeholder="Enter Aadhaar Number">
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Address</p>
+                        <input type="text" class="form-control" placeholder="Enter Address">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Landmark</p>
+                        <input type="text" class="form-control" placeholder="Enter Landmark">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">City</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select City</option>
+                            <option value="1">New York</option>
+                            <option value="1">Collarado</option>
+                            <option value="1">Manhattan</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Country</p>
+                        <input type="text" class="form-control" placeholder="Enter Country">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Email</p>
+                        <input type="text" class="form-control" placeholder="Enter Email Address">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Self Contact No.</p>
+                        <input type="text" class="form-control" placeholder="Enter Contact Number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Emergency Contact Person</p>
+                        <input type="text" class="form-control" placeholder="Enter Contact Person Name">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Emergency Contact No.</p>
+                        <input type="text" class="form-control" placeholder="Enter Emergency Contact No.">
+                    </div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Type of Insurance</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Type of Insurance</option>
+                            <option value="1">CCMA</option>
+                            <option value="1">SSYD</option>
+                            <option value="1">NTPD</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Policy Company Name</p>
+                        <input type="text" class="form-control" placeholder="Enter Cpmpany name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Policy Id</p>
+                        <input type="text" class="form-control" placeholder="Enter Policy Id">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Policy Status</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Status</option>
+                            <option value="1">Active</option>
+                            <option value="1">Inactive</option>
+                            <option value="1">Renew</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Policy Holder Relationship with Patient</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Relationship</option>
+                            <option value="1">Brother</option>
+                            <option value="1">Husband</option>
+                            <option value="1">Wife</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Policy Holder Name</p>
+                        <input type="text" class="form-control" placeholder="Enter Policy Holder Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Policy Holder D.O.B</p>
+                        <input type="date" class="form-control" placeholder="Select Date">
+                    </div>
+                    <div class="col-md-6 mb-3"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                </div>
+                <div class="col-xl-6">
+                    <div class="d-flex gap-2 align-items-center justify-content-end">
+                        <button class="btn btn-outline-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-3 py-1 d-block"> Close </span></button>
+                        <button class="btn btn-success px-4 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="py-1 d-block text-nowrap"> Add Patient </span></button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+     <!-- Modal -->
+     <div class="modal fade" id="giveAppointment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+                    <h5 class="text-success fw-bold mt-4">Give Appointment</h5>
+                <hr class="mb-0">
+                <div class="row mt-3">
+                    <div class="col-md-12 mb-3">
+                        <p class="text-muted mb-2 mt-0">Patient ID</p>
+                        <div class="position-relative">
+                            <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                            <input type="text" class="form-control bg-white rounded-2 search-field" placeholder="Search Patient ID">
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="rounded-3 bg-light p-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Patient Id :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">PAT-2563</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Age/Sex :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">32/Male</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Patient Name :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">Mr. Patient</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Blood Group :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">A+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Speciality</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Speciality</option>
+                            <option value="1">Surgen</option>
+                            <option value="1">Pediatric</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Doctor</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Doctor</option>
+                            <option value="1">Dr. Kapoor</option>
+                            <option value="1">Dr. Shweta</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Date</p>
+                        <input type="date" class="form-control" placeholder="Select Date">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Timing</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Time</option>
+                            <option value="1">10:00 am</option>
+                            <option value="1">11:00 am</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="rounded-3 bg-light p-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Doctor Id :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">DR-256323</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Date :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">10 Sep, 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Doctor Name :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">Mr. Doctor</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Time :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">09:30 AM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Fees</p>
+                        <div class="position-relative">
+                            <img src="../../images/rupee-success.svg" class="position-absolute search-icon" alt="search">
+                            <input type="text" class="form-control fw-bold text-success border-0 ps-4 fs-6" value=" 499" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-black mb-2 mt-0">Payment Mode</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">Select Payment Mode</option>
+                            <option value="1">USD</option>
+                            <option value="1">INR</option>
+                            <option value="1">CDR</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-7">
+                        <p class="text-muted mb-0 small">
+                            Appointment Date/Time - 24 Aug, 2023 / 10:15 AM
+                        </p>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="d-flex gap-2 align-items-center justify-content-end mt-4 mt-xl-0">
+                            <button class="btn btn-outline-success px-2 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-3 py-1 d-block"> Close </span></button>
+                            <button class="btn btn-success px-3 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="py-1 d-block text-nowrap"> Book Appointment </span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+     <!-- Modal -->
+     <div class="modal fade" id="admitpatient" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body bg-white p-5 pt-3 rounded-3">
+                    <h5 class="text-success fw-bold mt-4">Admit patient</h5>
+                <hr class="mb-0">
+                <div class="row mt-3">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Patient ID</p>
+                        <div class="position-relative">
+                            <img src="../../images/search.svg" class="position-absolute search-icon-end" alt="search">
+                            <input type="text" class="form-control bg-white rounded-2 search-field" placeholder="Search Patient ID">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Appointment ID</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Appointment ID</option>
+                            <option value="1">APP-124528</option>
+                            <option value="1">APP-124423</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="rounded-3 bg-light p-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Patient Id :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">PAT-2563</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Appointment Id :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">APP-985236</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Doctor Name  :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">Dr. Naveen Jindal</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Patient Name :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">Mr. Patient</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Age/Sex :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">32/Male</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="text-black mb-0">Blood Group :</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="text-dark mb-0 fw-medium">A+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <p class="text-muted mb-2 mt-0">Admission Summary</p>
+                        <textarea class="form-control" placeholder="Write admission summary..."></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Accomodation Ward</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Ward</option>
+                            <option value="1">Ward No. 1</option>
+                            <option value="1">Ward No. 2</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Accomodation Bed</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected="">Select Bed</option>
+                            <option value="1">Bed No. 1</option>
+                            <option value="1">Bed No. 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Referred type</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="d-flex align-items-center">
+                                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off">
+                                <label class="btn btn-outline-success p-2 px-3" for="success-outlined">None</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined1" autocomplete="off" disabled>
+                                <label class="btn btn-outline-success p-2 px-3 disabled" for="success-outlined1">Internal</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="radio" class="btn-check" name="options-outlined" id="success-outlined2" autocomplete="off" disabled>
+                                <label class="btn btn-outline-success p-2 px-3 disabled" for="success-outlined2">External</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Referred by</p>
+                        <select class="form-select" aria-label="Default select example" disabled>
+                            <option selected>Select Referral</option>
+                            <option value="1">Referral name</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-2 mt-0">Amount</p>
+                        <div class="position-relative">
+                            <img src="../../images/rupee-success.svg" class="position-absolute search-icon" alt="search">
+                            <input type="text" class="form-control fw-bold text-success ps-4 fs-6" value=" Enter Amount">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-black mb-2 mt-0">Payment Mode</p>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">Select Payment Mode</option>
+                            <option value="1">USD</option>
+                            <option value="1">INR</option>
+                            <option value="1">CDR</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-xl-7">
+                        <p class="text-muted mb-0 small">
+                            Appointment Date/Time - 24 Aug, 2023 / 10:15 AM
+                        </p>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="d-flex gap-2 align-items-center justify-content-end mt-4 mt-xl-0">
+                            <button class="btn btn-outline-success px-2 py-2 mb-1" data-bs-dismiss="modal" aria-label="Close"><span class="px-3 py-1 d-block"> Close </span></button>
+                            <a href="patient-management-list.html" class="btn btn-success px-3 py-2 mb-1"><span class="py-1 d-block text-nowrap"> Book Appointment </span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

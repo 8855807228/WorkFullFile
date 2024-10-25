@@ -1,0 +1,49 @@
+/* Container to make the table scrollable */
+.table-container {
+  max-height: 400px; /* Set a maximum height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ddd; /* Add a border around the table */
+  margin-top: 20px; /* Add spacing above the table */
+}
+
+/* General table styling */
+.table {
+  width: 100%; /* Make sure the table takes full width */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+}
+
+/* Header styling */
+.table thead th {
+  background-color: #f8f9fa; /* Light background for header */
+  position: sticky; /* Make the header sticky while scrolling */
+  top: 0;
+  z-index: 1;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd; /* Separate the header from the body */
+}
+
+/* Body cell styling */
+.table tbody td,
+.table tbody th {
+  padding: 12px;
+  border-bottom: 1px solid #ddd; /* Add borders between rows */
+  text-align: left;
+  vertical-align: middle; /* Center the image and text vertically */
+}
+
+/* Image styling */
+.table tbody th img {
+  width: 40px; /* Size the hospital logo */
+  height: 40px;
+  object-fit: cover; /* Keep the logo's aspect ratio */
+  border-radius: 50%; /* Make the logo circular */
+}
+
+/* Caption styling */
+.table caption {
+  caption-side: top;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
